@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { SigninComponent } from './pages/signin/signin.component';
 
 const routes: Routes = [
-    // { path: "", component: }, homepage
+    { path: "", component: HomeComponent },
     // { path: "**", component: }, homepage
     // {path : "product/:id" , component : }, deail product
     // {path : "signin" , component : },
     // {path : "signup" , component : },
-    // {path : "" , component : },
+    { path: "signin", component: SigninComponent },
     // {path : "" , component : },
     // {path : "" , component : },
     // {path : "" , component : },
@@ -16,4 +18,4 @@ const routes: Routes = [
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

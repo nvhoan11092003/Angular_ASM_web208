@@ -1,0 +1,28 @@
+.card-body h5:hover {
+    color: blue;
+}
+
+.buy a {
+    background-color: beige;
+}
+
+.cart-item {
+    background-color: rgb(228, 152, 54);
+    position: absolute;
+    color: white;
+    width: 40%;
+    padding: 3px;
+    border-radius: 0 5px 5px 0;
+    top: 200px;
+
+}
+
+.cart-item1 {
+    background-color: red;
+    position: absolute;
+    color: white;
+    width: 50%;
+    padding: 3px;
+    border-radius: 0 5px 5px 0;
+    top: 240px;
+}
