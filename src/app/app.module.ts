@@ -17,15 +17,16 @@ import { LayoutAdminComponent } from './layout/layout-admin/layout-admin.compone
 import { LayoutComponent } from './layout/layout/layout.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { HeaderAdminComponent } from './pages/admin/header-admin/header-admin.component';
-// import { HeaderComponent } from './components/header/header.component';
-// import { MenuComponent } from './components/menu/menu.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { ProductComponent } from './pages/client/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HomeComponent,
- 
+    ProductComponent,
     SliderComponent,
     SignUpComponent,
     SignInComponent,
@@ -34,8 +35,8 @@ import { HeaderAdminComponent } from './pages/admin/header-admin/header-admin.co
     LayoutComponent,
     DashboardComponent,
     HeaderAdminComponent,
-    // HeaderComponent,
-    // MenuComponent
+    HeaderComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
