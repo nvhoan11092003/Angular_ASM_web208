@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetailComponent } from './pages/client/detail/detail.component';
 import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './layout/layout/layout.component';
+// import { SigninComponent } from './pages/signin/signin.component';
 
 const routes: Routes = [
 
