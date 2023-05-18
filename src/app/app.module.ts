@@ -7,6 +7,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductComponent } from './components/product/product.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { SliderComponent } from './components/slider/slider.component';
     FooterComponent,
     HomeComponent,
     ProductComponent,
-    SliderComponent
+    SliderComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatAutocompleteModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent,
