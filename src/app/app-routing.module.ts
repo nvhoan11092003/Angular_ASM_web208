@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DetailComponent } from './pages/detail/detail.component';
 import { HomeComponent } from './components/home/home.component';
-import { SigninComponent } from './pages/signin/signin.component';
+// import { SigninComponent } from './pages/signin/signin.component';
 
 const routes: Routes = [
   // { path: "", component: }, homepage
