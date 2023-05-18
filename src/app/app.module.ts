@@ -8,7 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductComponent } from './components/product/product.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { FormsModule } from '@angular/forms';
@@ -33,8 +34,8 @@ import { MenuComponent } from './components/menu/menu.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatAutocompleteModule,
-    MatInputModule,
-    FormsModule,
+    MatInputModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent,

@@ -26,8 +26,20 @@
                         ],
                         "styles": [
                           "@angular/material/prebuilt-themes/indigo-pink.css",
+<<<<<<< HEAD
+                          "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+                          "src/styles.css"
+                        ],
+                        "assets": [
+                            "src/favicon.ico",
+                            "src/assets"
+                        ],
+                        "styles": [
+                            "src/styles.css"
+=======
                           "src/styles.css",
                           "./node_modules/bootstrap/dist/css/bootstrap.css"
+>>>>>>> 5587ddb617eb58ec3a93fd7b2f6dc4ff5092439e
                         ],
                         "scripts": [
                             "./node_modules/bootstrap/dist/js/bootstrap.min.js"
