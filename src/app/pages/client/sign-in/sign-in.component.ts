@@ -1,13 +1,12 @@
-import { iuser } from './../../models/user';
+import { iuser } from '../../../models/user';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-sign-up',
-  templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  selector: 'app-sign-in',
+  templateUrl: './sign-in.component.html',
+  styleUrls: ['./sign-in.component.css']
 })
-  
-export class SignUpComponent {
+export class SignInComponent {
   user : iuser = {
     name: '',
     email: '',
@@ -18,4 +17,5 @@ export class SignUpComponent {
     console.log('Login submitted:', this.user);
     // Goi API
   }
+
 }
