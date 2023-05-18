@@ -1,19 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailComponent } from './pages/detail/detail.component';
 
 const routes: Routes = [
-    // { path: "", component: }, homepage
-    // { path: "**", component: }, homepage
-    // {path : "product/:id" , component : }, deail product
-    // {path : "signin" , component : },
-    // {path : "signup" , component : },
-    // {path : "" , component : },
-    // {path : "" , component : },
-    // {path : "" , component : },
-    // {path : "" , component : },
+  { path: 'details', component: DetailComponent },
 ];
+
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
