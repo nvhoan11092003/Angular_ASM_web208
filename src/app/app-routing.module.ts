@@ -11,37 +11,38 @@ import { LayoutComponent } from './layout/layout/layout.component';
 
 const routes: Routes = [
 
-    {
-        path: '',
-        component: LayoutComponent,
-        children: [
-          { path: '', redirectTo: 'home', pathMatch: 'full' },
-          { path: 'home', component: HomeComponent },
-          {
-            path: 'signin',
-            component: SignInComponent ,
-            },
-            {
-                path: 'signup',
-                component: SignUpComponent ,
-              },
-        
-        ],
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+      { path: "product/:id", component: DetailComponent },
+      {
+        path: 'signin',
+        component: SignInComponent,
+      },
+      {
+        path: 'signup',
+        component: SignUpComponent,
       },
 
-    // Ứng dụng phía máy chủ: (admin)
+    ],
+  },
+
+  // Ứng dụng phía máy chủ: (admin)
   {
     path: 'admin',
     component: LayoutAdminComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-    //   { path: 'products', component: ProductComponent },
+      //   { path: 'products', component: ProductComponent },
     ],
   }
 
   // ứng dụng phía khách:
-  
+
 
 
 ];
