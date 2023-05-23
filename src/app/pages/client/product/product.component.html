@@ -13,10 +13,10 @@
                         <p class="card-text text-danger fs-5 me-5">{{items.price}}đ</p>
                         <p class="card-text mt-1">{{items.original_price}}đ</p>
                     </div>
-                    <!-- <p>Thương hiệu : <label class="text-primary fw-bold"> {{items.brand.name}}</label></p>
-                    <button (click)="viewDetail(items.id)" class="btn btn-primary">xem chi tiết</button> -->
                     <p>Thương hiệu : <label class="text-primary fw-bold"> {{items.brand.name}}</label></p>
-                    <a routerLink="/detail" *ngIf="isShow" (click)="gotoTop()" class="btn btn-primary">xem chi tiết</a>
+                    <button (click)="viewDetail(items.id) ;gotoTop()" *ngIf="isShow" class="btn btn-primary">xem chi
+                        tiết</button>
+
                 </div>
             </div>
             <div>
