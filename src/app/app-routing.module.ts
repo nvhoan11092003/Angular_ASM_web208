@@ -17,6 +17,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
+      { path: "product/:id", component: DetailComponent },
       {
         path: 'signin',
         component: SignInComponent,
@@ -25,9 +26,14 @@ const routes: Routes = [
         path: 'signup',
         component: SignUpComponent,
       },
+      {
+        path: 'signup',
+        component: SignUpComponent,
+      },
       { path: 'detail', component: DetailComponent },
     ],
   },
+
 
   // Ứng dụng phía máy chủ: (admin)
   {

@@ -20,6 +20,7 @@ import { HeaderAdminComponent } from './pages/admin/header-admin/header-admin.co
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProductComponent } from './pages/client/product/product.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { ProductComponent } from './pages/client/product/product.component';
     BrowserAnimationsModule,
     // MatAutocompleteModule,
     // MatInputModule
-    FormsModule
+    FormsModule, CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent,

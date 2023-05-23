@@ -21,22 +21,7 @@ export const products = [
                     'https://salt.tikicdn.com/cache/200x280/ts/product/43/35/ca/4630727d5a4eee189dc3dacae0bf39d7.jpg',
                 thumbnail_url:
                     'https://salt.tikicdn.com/cache/200x280/ts/product/43/35/ca/4630727d5a4eee189dc3dacae0bf39d7.jpg',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/6e/44/b5/04d9e0950060436a08e391205e25ea4c.png',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/6e/44/b5/04d9e0950060436a08e391205e25ea4c.png',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/6e/44/b5/04d9e0950060436a08e391205e25ea4c.png',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/6e/44/b5/04d9e0950060436a08e391205e25ea4c.png',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/6e/44/b5/04d9e0950060436a08e391205e25ea4c.png',
-            },
+            }
         ],
         brand: {
             id: 18802,
@@ -278,22 +263,7 @@ export const products = [
                     'https://salt.tikicdn.com/cache/200x280/ts/product/0c/dd/e7/e6431984901119a1f8166cc4e579da93.png',
                 thumbnail_url:
                     'https://salt.tikicdn.com/cache/200x280/ts/product/0c/dd/e7/e6431984901119a1f8166cc4e579da93.png',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/89/0b/da/b8124e465e0585ba3d8f36a5bf9b4d0d.jpg',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/89/0b/da/b8124e465e0585ba3d8f36a5bf9b4d0d.jpg',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/89/0b/da/b8124e465e0585ba3d8f36a5bf9b4d0d.jpg',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/89/0b/da/b8124e465e0585ba3d8f36a5bf9b4d0d.jpg',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/89/0b/da/b8124e465e0585ba3d8f36a5bf9b4d0d.jpg',
-            },
+            }
         ],
         brand: {
             id: 17827,
@@ -400,22 +370,7 @@ export const products = [
                     'https://salt.tikicdn.com/cache/200x280/ts/product/a1/cd/ce/84a16c41ac07ce50d754e44a16ecbd1c.jpg',
                 thumbnail_url:
                     'https://salt.tikicdn.com/cache/200x280/ts/product/a1/cd/ce/84a16c41ac07ce50d754e44a16ecbd1c.jpg',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/10/ab/e3/23f4e6f5158161a89c63623dc088be40.jpg',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/10/ab/e3/23f4e6f5158161a89c63623dc088be40.jpg',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/10/ab/e3/23f4e6f5158161a89c63623dc088be40.jpg',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/10/ab/e3/23f4e6f5158161a89c63623dc088be40.jpg',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/10/ab/e3/23f4e6f5158161a89c63623dc088be40.jpg',
-            },
+            }
         ],
         brand: {
             id: 17827,
@@ -637,22 +592,7 @@ export const products = [
                     'https://salt.tikicdn.com/cache/200x280/ts/product/54/ff/25/bfdf0febe11a28eaa7cd3fa735a82c49.png',
                 thumbnail_url:
                     'https://salt.tikicdn.com/cache/200x280/ts/product/54/ff/25/bfdf0febe11a28eaa7cd3fa735a82c49.png',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/91/8e/0f/3d91c418c952c8bad2fb52e7d34eb2c8.jpg',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/91/8e/0f/3d91c418c952c8bad2fb52e7d34eb2c8.jpg',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/91/8e/0f/3d91c418c952c8bad2fb52e7d34eb2c8.jpg',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/91/8e/0f/3d91c418c952c8bad2fb52e7d34eb2c8.jpg',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/91/8e/0f/3d91c418c952c8bad2fb52e7d34eb2c8.jpg',
-            },
+            }
         ],
         brand: {
             id: 17827,
@@ -789,127 +729,7 @@ export const products = [
                     'https://salt.tikicdn.com/cache/200x280/ts/product/70/e7/82/37fd62ed4c7a81f14f017fc890792474.jpg',
                 thumbnail_url:
                     'https://salt.tikicdn.com/cache/200x280/ts/product/70/e7/82/37fd62ed4c7a81f14f017fc890792474.jpg',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/32/e3/02/59622448d6e5f1ecf44525234e9bab66.jpg',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/32/e3/02/59622448d6e5f1ecf44525234e9bab66.jpg',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/32/e3/02/59622448d6e5f1ecf44525234e9bab66.jpg',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/32/e3/02/59622448d6e5f1ecf44525234e9bab66.jpg',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/32/e3/02/59622448d6e5f1ecf44525234e9bab66.jpg',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/ff/0d/39/6756f31b553b086104923338a540ee7a.jpg',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/ff/0d/39/6756f31b553b086104923338a540ee7a.jpg',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/ff/0d/39/6756f31b553b086104923338a540ee7a.jpg',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/ff/0d/39/6756f31b553b086104923338a540ee7a.jpg',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/ff/0d/39/6756f31b553b086104923338a540ee7a.jpg',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/e1/49/d6/10df55b79121f3b0b67ae26802fe2c68.jpg',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/e1/49/d6/10df55b79121f3b0b67ae26802fe2c68.jpg',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/e1/49/d6/10df55b79121f3b0b67ae26802fe2c68.jpg',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/e1/49/d6/10df55b79121f3b0b67ae26802fe2c68.jpg',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/e1/49/d6/10df55b79121f3b0b67ae26802fe2c68.jpg',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/6f/3c/57/26d5a4fe67248e418e265bdb503afb23.jpg',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/6f/3c/57/26d5a4fe67248e418e265bdb503afb23.jpg',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/6f/3c/57/26d5a4fe67248e418e265bdb503afb23.jpg',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/6f/3c/57/26d5a4fe67248e418e265bdb503afb23.jpg',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/6f/3c/57/26d5a4fe67248e418e265bdb503afb23.jpg',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/5e/6a/78/68dd6633628f92b11aa097abe97a177d.jpg',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/5e/6a/78/68dd6633628f92b11aa097abe97a177d.jpg',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/5e/6a/78/68dd6633628f92b11aa097abe97a177d.jpg',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/5e/6a/78/68dd6633628f92b11aa097abe97a177d.jpg',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/5e/6a/78/68dd6633628f92b11aa097abe97a177d.jpg',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/d7/6e/48/10540720a36809854196e73f987e9ad5.jpg',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/d7/6e/48/10540720a36809854196e73f987e9ad5.jpg',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/d7/6e/48/10540720a36809854196e73f987e9ad5.jpg',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/d7/6e/48/10540720a36809854196e73f987e9ad5.jpg',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/d7/6e/48/10540720a36809854196e73f987e9ad5.jpg',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/21/49/ec/13c20df8ab3ed189535e7b4f9ae689b7.jpg',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/21/49/ec/13c20df8ab3ed189535e7b4f9ae689b7.jpg',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/21/49/ec/13c20df8ab3ed189535e7b4f9ae689b7.jpg',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/21/49/ec/13c20df8ab3ed189535e7b4f9ae689b7.jpg',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/21/49/ec/13c20df8ab3ed189535e7b4f9ae689b7.jpg',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/4b/49/75/64ab257c7c29a1f13fb7c9a9a906bd6a.jpg',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/4b/49/75/64ab257c7c29a1f13fb7c9a9a906bd6a.jpg',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/4b/49/75/64ab257c7c29a1f13fb7c9a9a906bd6a.jpg',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/4b/49/75/64ab257c7c29a1f13fb7c9a9a906bd6a.jpg',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/4b/49/75/64ab257c7c29a1f13fb7c9a9a906bd6a.jpg',
-            },
+            }
         ],
         brand: {
             id: 17827,
@@ -1031,22 +851,7 @@ export const products = [
                     'https://salt.tikicdn.com/cache/200x280/ts/product/c2/7e/ba/44fe328c9a95e8bbc9cb84caaf3a25cb.png',
                 thumbnail_url:
                     'https://salt.tikicdn.com/cache/200x280/ts/product/c2/7e/ba/44fe328c9a95e8bbc9cb84caaf3a25cb.png',
-            },
-            {
-                base_url:
-                    'https://salt.tikicdn.com/ts/product/ec/9f/5e/7b656c0e6bc10fa9c59f00685d7b26d3.png',
-                is_gallery: true,
-                label: null,
-                large_url:
-                    'https://salt.tikicdn.com/cache/w1200/ts/product/ec/9f/5e/7b656c0e6bc10fa9c59f00685d7b26d3.png',
-                medium_url:
-                    'https://salt.tikicdn.com/cache/w300/ts/product/ec/9f/5e/7b656c0e6bc10fa9c59f00685d7b26d3.png',
-                position: null,
-                small_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/ec/9f/5e/7b656c0e6bc10fa9c59f00685d7b26d3.png',
-                thumbnail_url:
-                    'https://salt.tikicdn.com/cache/200x280/ts/product/ec/9f/5e/7b656c0e6bc10fa9c59f00685d7b26d3.png',
-            },
+            }
         ],
         brand: {
             id: 17827,

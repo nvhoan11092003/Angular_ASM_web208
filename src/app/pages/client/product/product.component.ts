@@ -1,5 +1,7 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
 import { products } from 'src/app/data/products';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -35,6 +37,13 @@ export class ProductComponent {
       behavior: 'smooth'
     });
   }
+  constructor(private router: Router) { }
+
+  ngOnInit() { }
+
+  viewDetail(productId: string | number) {
+    // Điều hướng đến trang chi tiết sản phẩm với productId
+    this.router.navigate(['/product', productId]);
+  }
 
 }
-
