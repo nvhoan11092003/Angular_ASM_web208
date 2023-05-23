@@ -14,7 +14,7 @@
                         <p class="card-text mt-1">{{item.original_price}}đ</p>
                     </div>
                     <p>Thương hiệu : <label class="text-primary fw-bold"> {{item.brand.name}}</label></p>
-                    <a routerLink="/detail" class="btn btn-primary">xem chi tiết</a>
+                    <a routerLink="/detail" *ngIf="isShow" (click)="gotoTop()" class="btn btn-primary">xem chi tiết</a>
                 </div>
             </div>
             <div>
