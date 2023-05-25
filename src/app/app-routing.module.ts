@@ -8,6 +8,7 @@ import { DetailComponent } from './pages/client/detail/detail.component';
 import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './layout/layout/layout.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { BlogComponent } from './pages/client/blog/blog.component';
 // import { SigninComponent } from './pages/signin/signin.component';
 
 const routes: Routes = [
@@ -27,8 +28,8 @@ const routes: Routes = [
         path: 'signup',
         component: SignUpComponent,
       },
+      { path: 'blog', component: BlogComponent },
       { path: '**', component: NotFoundComponent },
-      { path: 'detail', component: DetailComponent },
     ],
   },
 
