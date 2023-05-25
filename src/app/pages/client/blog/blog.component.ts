@@ -1,31 +1,13 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
-import axios from 'axios';
-import { Product } from 'src/app/common/product';
 import { products } from 'src/app/data/products';
 import { Router } from '@angular/router';
-
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  selector: 'app-blog',
+  templateUrl: './blog.component.html',
+  styleUrls: ['./blog.component.css']
 })
-export class ProductComponent {
-  product: Product[] = []
-  data = axios.get("http://localhost:8000/api/products")
-    .then((res) => {
-      this.product = res.data
-
-    })
-    .catch((error) => console.log(error));
-
-
-
-
-
-
-
-
-
+export class BlogComponent {
+  product = products;
 
   isShow: boolean = false;
   topPosToStartShowing = 100;
@@ -66,11 +48,4 @@ export class ProductComponent {
     style: 'currency',
     currency: 'VND',
   });
-
-
-
-
-
-
-
 }

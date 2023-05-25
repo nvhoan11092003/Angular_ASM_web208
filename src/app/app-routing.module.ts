@@ -7,6 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetailComponent } from './pages/client/detail/detail.component';
 import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './layout/layout/layout.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { BlogComponent } from './pages/client/blog/blog.component';
 // import { SigninComponent } from './pages/signin/signin.component';
 
 const routes: Routes = [
@@ -17,6 +19,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
+      { path: "product/:id", component: DetailComponent },
       {
         path: 'signin',
         component: SignInComponent,
@@ -25,9 +28,11 @@ const routes: Routes = [
         path: 'signup',
         component: SignUpComponent,
       },
-      { path: 'detail', component: DetailComponent },
+      { path: 'blog', component: BlogComponent },
+      { path: '**', component: NotFoundComponent },
     ],
   },
+
 
   // Ứng dụng phía máy chủ: (admin)
   {
