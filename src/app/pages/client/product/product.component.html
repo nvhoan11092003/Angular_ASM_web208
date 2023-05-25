@@ -10,8 +10,8 @@
                 <div class="card-body">
                     <h5 class="card-title">{{items.name}}</h5>
                     <div class="d-flex">
-                        <p class="card-text text-danger fs-5 me-5">{{items.price}}đ</p>
-                        <p class="card-text mt-1">{{items.original_price}}đ</p>
+                        <p class="card-text text-danger fs-5 me-5">{{VND.format(items.price)}}</p>
+                        <p class="card-text mt-1">{{VND.format(items.original_price)}}</p>
                     </div>
                     <p>Thương hiệu : <label class="text-primary fw-bold"> {{items.brand.name}}</label></p>
                     <button (click)="viewDetail(items.id) ;gotoTop()" *ngIf="isShow" class="btn btn-primary">xem chi

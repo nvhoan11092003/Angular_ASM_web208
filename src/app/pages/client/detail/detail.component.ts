@@ -19,5 +19,9 @@ export class DetailComponent implements OnInit {
       this.product = products.find((product) => product.id === productId);
     });
   }
+  VND = new Intl.NumberFormat('vi-VN', {
+    style: 'currency',
+    currency: 'VND',
+  });
 }
 

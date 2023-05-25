@@ -45,5 +45,9 @@ export class ProductComponent {
     // Điều hướng đến trang chi tiết sản phẩm với productId
     this.router.navigate(['/product', productId]);
   }
+  VND = new Intl.NumberFormat('vi-VN', {
+    style: 'currency',
+    currency: 'VND',
+  });
 
 }
