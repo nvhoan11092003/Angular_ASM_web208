@@ -3,8 +3,8 @@
     <div class="row row-cols-1 row-cols-md-4 g-4">
         <div class="col" *ngFor="let items of product">
             <div class="card" style="width: 18rem;">
-                <a [routerLink]="['/product',items.id]"> <img [src]="items.images[0].base_url" class="card-img-top"
-                        alt="image sản phẩm"></a>
+                <a (click)="gotoTop()" [routerLink]="['/product',items.id]"> <img [src]="items.images[0].base_url"
+                        class="card-img-top" alt="image sản phẩm"></a>
                 <p class="cart-item">Trả góp 0%</p>
                 <p class="cart-item1">Giảm 7.000.000đ</p>
                 <div class="card-body">
