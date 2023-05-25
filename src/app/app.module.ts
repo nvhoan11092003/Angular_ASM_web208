@@ -21,6 +21,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProductComponent } from './pages/client/product/product.component';
 import { CommonModule } from '@angular/common';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CommonModule } from '@angular/common';
     DashboardComponent,
     HeaderAdminComponent,
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
