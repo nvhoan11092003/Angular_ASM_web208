@@ -13,7 +13,7 @@
                         <p class="card-text text-danger fs-5 me-5">{{item.price}}đ</p>
                         <p class="card-text mt-1">{{item.original_price}}đ</p>
                     </div>
-                    <p>Thương hiệu : <label class="text-primary fw-bold"> {{item.brand.name}}</label></p>
+                    <p>Thương hiệu : <label class="text-primary fw-bold"> {{item.brandID}}</label></p>
                     <a routerLink="/detail" *ngIf="isShow" (click)="gotoTop()" class="btn btn-primary">xem chi tiết</a>
                 </div>
             </div>

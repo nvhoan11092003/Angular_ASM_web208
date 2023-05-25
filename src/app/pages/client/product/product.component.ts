@@ -1,4 +1,6 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
+import axios from 'axios';
+import { Product } from 'src/app/common/product';
 import { products } from 'src/app/data/products';
 @Component({
   selector: 'app-product',
@@ -6,7 +8,22 @@ import { products } from 'src/app/data/products';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-  product = products
+  product: Product[] = []
+  data = axios.get("http://localhost:8000/api/products")
+    .then((res) => {
+      this.product = res.data
+
+    })
+    .catch((error) => console.log(error));
+
+
+
+
+
+
+
+
+
 
   isShow: boolean = false;
   topPosToStartShowing = 100;
@@ -35,6 +52,12 @@ export class ProductComponent {
       behavior: 'smooth'
     });
   }
+
+
+
+
+
+
 
 }
 
