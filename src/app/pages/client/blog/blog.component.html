@@ -1,0 +1,73 @@
+<div class="blog">
+    <div class="d-flex position-relative mt-5 mb-5 container blog-item">
+        <img src="https://images.fpt.shop/unsafe/fit-in/300x200/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/5/18/638199668136475977_so-sanh-cac-dong-may-hut-bui-ecovacs.jpg"
+            class="flex-shrink-0 me-3" alt="...">
+        <div>
+            <h5 class="mt-0">Tất tần tật về Samsung Galaxy Z Fold5: Siêu phẩm màn hình gập sắp ra mắt có gì “hot”?</h5>
+            <p>Siêu phẩm Galaxy Z Fold 5 năm nay sẽ đạt được bước tiến mạnh mẽ về hiệu năng với sự góp mặt của chip
+                Snapdragon 8 Gen 2. Không chỉ vậy, việc làm phẳng nếp gấp màn hình cũng xóa bỏ khiếm khuyết về thẩm mỹ.
+            </p>
+            <a href="#" class="stretched-link">Go somewhere</a>
+        </div>
+    </div>
+    <div class="d-flex position-relative mt-5 mb-5 container blog-item">
+        <img src="https://images.fpt.shop/unsafe/fit-in/300x200/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/5/18/638199668136475977_so-sanh-cac-dong-may-hut-bui-ecovacs.jpg"
+            class="flex-shrink-0 me-3" alt="...">
+        <div>
+            <h5 class="mt-0">Tất tần tật về Samsung Galaxy Z Fold5: Siêu phẩm màn hình gập sắp ra mắt có gì “hot”?</h5>
+            <p>Siêu phẩm Galaxy Z Fold 5 năm nay sẽ đạt được bước tiến mạnh mẽ về hiệu năng với sự góp mặt của chip
+                Snapdragon 8 Gen 2. Không chỉ vậy, việc làm phẳng nếp gấp màn hình cũng xóa bỏ khiếm khuyết về thẩm mỹ.
+            </p>
+            <a href="#" class="stretched-link">Go somewhere</a>
+        </div>
+    </div>
+    <div class="d-flex position-relative mt-5 mb-5 container blog-item">
+        <img src="https://images.fpt.shop/unsafe/fit-in/300x200/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/5/18/638199668136475977_so-sanh-cac-dong-may-hut-bui-ecovacs.jpg"
+            class="flex-shrink-0 me-3" alt="...">
+        <div>
+            <h5 class="mt-0">Tất tần tật về Samsung Galaxy Z Fold5: Siêu phẩm màn hình gập sắp ra mắt có gì “hot”?</h5>
+            <p>Siêu phẩm Galaxy Z Fold 5 năm nay sẽ đạt được bước tiến mạnh mẽ về hiệu năng với sự góp mặt của chip
+                Snapdragon 8 Gen 2. Không chỉ vậy, việc làm phẳng nếp gấp màn hình cũng xóa bỏ khiếm khuyết về thẩm mỹ.
+            </p>
+            <a href="#" class="stretched-link">Go somewhere</a>
+        </div>
+    </div>
+    <div class="d-flex position-relative mt-5 mb-5 container blog-item">
+        <img src="https://images.fpt.shop/unsafe/fit-in/300x200/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2023/5/18/638199668136475977_so-sanh-cac-dong-may-hut-bui-ecovacs.jpg"
+            class="flex-shrink-0 me-3" alt="...">
+        <div>
+            <h5 class="mt-0">Tất tần tật về Samsung Galaxy Z Fold5: Siêu phẩm màn hình gập sắp ra mắt có gì “hot”?</h5>
+            <p>Siêu phẩm Galaxy Z Fold 5 năm nay sẽ đạt được bước tiến mạnh mẽ về hiệu năng với sự góp mặt của chip
+                Snapdragon 8 Gen 2. Không chỉ vậy, việc làm phẳng nếp gấp màn hình cũng xóa bỏ khiếm khuyết về thẩm mỹ.
+            </p>
+            <a href="#" class="stretched-link">Go somewhere</a>
+        </div>
+    </div>
+    <section class="container-xxl mt-3 mb-3">
+        <h2>Sản phẩm dành riêng cho bạn</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col" *ngFor="let items of product">
+                <div class="card" style="width: 18rem;">
+                    <a [routerLink]="['/product',items.id]"> <img [src]="items.images[0].base_url" class="card-img-top"
+                            alt="image sản phẩm"></a>
+                    <p class="cart-item">Trả góp 0%</p>
+                    <p class="cart-item1">Giảm 7.000.000đ</p>
+                    <div class="card-body">
+                        <h5 class="card-title">{{items.name}}</h5>
+                        <div class="d-flex">
+                            <p class="card-text text-danger fs-5 me-5">{{VND.format(items.price)}}</p>
+                            <p class="card-text mt-1">{{VND.format(items.original_price)}}</p>
+                        </div>
+                        <p>Thương hiệu : <label class="text-primary fw-bold"> {{items.brand.name}}</label></p>
+                        <button (click)="viewDetail(items.id) ;gotoTop()" *ngIf="isShow" class="btn btn-primary">xem chi
+                            tiết</button>
+
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
