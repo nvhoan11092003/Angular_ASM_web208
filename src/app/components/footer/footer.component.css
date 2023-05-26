@@ -6,3 +6,75 @@
     color: black;
     text-decoration: underline;
 }
+
+.items img {
+    width: 100%;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+.item-children {
+    display: none;
+}
+
+.question {
+    display: none;
+}
+
+.phone {
+    display: none;
+}
+
+@media(min-width:768px) {
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .footer-item {
+        display: block;
+    }
+
+    .question {
+        display: block;
+    }
+
+    .phone {
+        display: block;
+    }
+
+    .item-children {
+        display: none;
+    }
+}
+
+@media(min-width:1024px) {
+
+    .footer-item {
+        display: none;
+    }
+
+    .question {
+        display: block;
+    }
+
+    .phone {
+        display: block;
+    }
+
+    .item-children {
+        display: block;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}

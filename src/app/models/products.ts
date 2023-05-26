@@ -36,3 +36,14 @@ interface product {
         }
     ];
 }
+export interface IProduct {
+    _id?: number | string,
+    name: string,
+    price: number,
+    original_price: number,
+    description: string,
+    categoryId?: string | number,
+    salient_features: string,
+    comments?: string,
+    image: string,
+}
