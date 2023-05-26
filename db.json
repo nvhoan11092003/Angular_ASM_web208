@@ -1,0 +1,108 @@
+{
+    "products": [
+        {
+            "id": "642cec5fab74c414f7674546",
+            "name": "iPhone 14 Pro Max 1TB gold",
+            "price": 32000000,
+            "original_price": 40000000,
+            "description": "Máy tính bảng Lenovo Tab M8 có thiết kế cao cấp nhờ mặt lưng được làm bằng chất liệu nhựa nguyên khối, chắc chắn cho cảm giác cầm nắm vô cùng thích333",
+            "categoryId": "642c614d0ed067d8e625a1b6",
+            "createdAt": "2023-04-05T03:34:55.210Z",
+            "updatedAt": "2023-05-18T10:50:59.391Z",
+            "salient_features": "Máy tính bảng Lenovo Tab M8 có thiết kế cao cấp nhờ mặt lưng được làm bằng chất liệu nhựa nguyên khối, chắc chắn cho cảm giác cầm nắm vô cùng thích333",
+            "comments": [],
+            "image": "http://res.cloudinary.com/dxzlnojyv/image/upload/v1684407058/wth8ji8vtees6vr6bse0.jpg"
+        },
+        {
+            "id": "642cef06ab74c414f7674590",
+            "name": "iPhone 14 Pro 128GB",
+            "price": 25000000,
+            "original_price": 39000000,
+            "description": "iPhone 14 Pro hội tụ những tính năng đẳng cấp nhất với thiết kế mới, bộ vi xử lý Apple A16 Bionic với sức mạnh chưa từng thấy, camera 48MP nâng cấp vượt trội, màn hình Always-On đầy thú vị và hơn thế nữa",
+            "categoryId": "642a7fe3a72296ba8fab007d",
+            "createdAt": "2023-04-05T03:46:14.854Z",
+            "updatedAt": "2023-05-12T09:21:59.755Z",
+            "salient_features": "iPhone 14 Pro hội tụ những tính năng đẳng cấp nhất với thiết kế mới, bộ vi xử lý Apple A16 Bionic với sức mạnh chưa từng thấy, camera 48MP nâng cấp vượt trội, màn hình Always-On đầy thú vị và hơn thế nữa",
+            "comments": [],
+            "image": "http://res.cloudinary.com/dxzlnojyv/image/upload/v1683883308/q3cm0dzvrtl0pm8etujn.jpg"
+        },
+        {
+            "id": "642cef43ab74c414f7674594",
+            "name": "iPhone 14 Pro Max 1TB",
+            "price": 41000000,
+            "original_price": 49000000,
+            "description": "Máy tính bảng iPad Pro M1 11 inch WiFi 2TB (2021) được giới thiệu với 2 màu xám và bạc hiện đạiMP lần đầu xuất hiện, chip A16 Bionic và màn hình “viên thuốc” Dynamic Island linh hoạt, nịnh mắt.",
+            "categoryId": "642a7fe3a72296ba8fab007d",
+            "createdAt": "2023-04-05T03:47:15.664Z",
+            "updatedAt": "2023-05-12T09:23:42.169Z",
+            "salient_features": "Máy tính bảng iPad Pro M1 11 inch WiFi 2TB (2021) được giới thiệu với 2 màu xám và bạc hiện đạiMP lần đầu xuất hiện, chip A16 B",
+            "comments": [],
+            "image": "http://res.cloudinary.com/dxzlnojyv/image/upload/v1683883420/ggxkapc7qj1e1mtpegou.jpg"
+        },
+        {
+            "id": "642cef7aab74c414f7674598",
+            "name": "iPhone 14 Plus 512GB",
+            "price": 25000000,
+            "original_price": 36000000,
+            "description": "Sự hấp dẫn của chiếc iPhone thế hệ mới 2022 với màn hình lớn, pin xuất sắc nhất từ trước đến nay, chụp đêm ấn tượng và loạt công nghệ đỉnh cao, iPhone 14 Plus mang người dùng vào những trải nghiệm di động tiên tiến, sẵn sàng cho cuộc sống năng động, thông minh và tiện lợi.",
+            "categoryId": "642a7fe3a72296ba8fab007d",
+            "createdAt": "2023-04-05T03:48:10.406Z",
+            "updatedAt": "2023-05-12T09:23:54.224Z",
+            "salient_features": "Sự hấp dẫn của chiếc iPhone thế hệ mới 2022 với màn hình lớn, pin xuất sắc nhất từ trước đến nay, chụp đêm ấn tượng và loạt công nghệ đỉnh cao, iPhone 14 Plus mang người dùng vào những trải nghiệm di động tiên tiến, sẵn sàng cho cuộc sống năng động, thông minh và tiện lợi.",
+            "comments": [],
+            "image": "http://res.cloudinary.com/dxzlnojyv/image/upload/v1683883430/csmlhoaqsndjfghvsqoz.jpg"
+        },
+        {
+            "id": "642ceff6ab74c414f767459c",
+            "name": "Samsung Galaxy S21 FE 5G",
+            "price": 18799000,
+            "original_price": 26900000,
+            "description": "Samsung Galaxy S21 FE 5G sở hữu tấm nền Dynamic AMOLED 2X với dải màu cực rộng và độ tương phản cao, độ phân giải chuẩn Full HD+ thể hiện từng chi tiết và màu sắc chuẩn xác, sắc nét đầy chân thực. Độ sáng màn hình tối đa 1200 nits nên khi sử dụng ngoài trời vẫn mang đến chất lượng hiển thị tốt, không bị lóa mờ",
+            "categoryId": "642a864f479360e7d401496e",
+            "createdAt": "2023-04-05T03:50:14.634Z",
+            "updatedAt": "2023-05-12T09:29:25.603Z",
+            "salient_features": "Samsung mang đến cho người dùng phiên bản điện thoại Samsung Galaxy S21 FE 5G (8GB/128GB) mới có sức hút hấp dẫn với ngoại hình tinh tế, nịnh mắt, một cấu hình mạnh mẽ từ chip Exynos 2100 và ấn tượng ở khả năng quay chụp từ hệ thống camera thông minh, xịn sò",
+            "comments": [],
+            "image": "http://res.cloudinary.com/dxzlnojyv/image/upload/v1683883723/srzxhzjkbof20o1l45ot.jpg"
+        },
+        {
+            "id": "6432f6f8ab63efd4bd8d3024",
+            "name": "Samsung Galaxy A23 6GB ",
+            "price": 51999000,
+            "original_price": 52000000,
+            "description": "Samsung mang đến cho người dùng phiên bản điện thoại Samsung Galaxy S21 FE 5G (8GB/128GB) mới có sức hút hấp dẫn với ngoại hình tinh tế, nịnh mắt, một cấu hình mạnh mẽ từ chip Exynos 2100 và ấn tượng ở khả năng quay chụp từ hệ thống camera thông minh, xịn sò",
+            "categoryId": "642a864f479360e7d401496e",
+            "comments": [],
+            "createdAt": "2023-04-09T17:33:44.821Z",
+            "updatedAt": "2023-05-12T09:30:06.900Z",
+            "image": "http://res.cloudinary.com/dxzlnojyv/image/upload/v1683883775/fqqea1o1wqsuuitrh2ky.jpg",
+            "salient_features": "Samsung Galaxy S21 FE 5G sở hữu tấm nền Dynamic AMOLED 2X với dải màu cực rộng và độ tương phản cao, độ phân giải chuẩn Full HD+ thể hiện từng chi tiết và màu sắc chuẩn xác, sắc nét đầy chân thực. Độ sáng màn hình tối đa 1200 nits nên khi sử dụng ngoài trời vẫn mang đến chất lượng hiển thị tốt, không bị lóa mờ"
+        },
+        {
+            "id": "6432f74f1012f649876762ac",
+            "name": "Điện thoại Samsung Galaxy S20 Utra ",
+            "price": 51999000,
+            "original_price": 52000000,
+            "description": "Samsung Galaxy S20 FE được trang bị màn hình siêu tràn viền Infinity-O có kích thước 6.5 inch đi cùng tấm nền Super AMOLED, độ phân giải Full HD+ cho người dùng dễ dàng đắm chìm vào không gian giải trí lớn với những hình ảnh, nội dung hiển thị sắc nét nịnh mắt trên một màn ảnh vô cùng chất lượng.",
+            "salient_features": "Smartphone Samsung Galaxy S20 FE là mẫu flagship cao cấp được rút gọn từ phiên bản Samsung Galaxy S20, kế thừa những ưu điểm tính năng nổi bật từ người đàn anh với thiết kế trẻ trung, cụm camera đa dụng cùng hiệu năng nổi trội chắc chắn sẽ là mẫu điện thoại thông minh hot nhất trong thời gian tới.",
+            "categoryId": "642a7fe3a72296ba8fab007d",
+            "comments": [],
+            "createdAt": "2023-04-09T17:35:11.370Z",
+            "updatedAt": "2023-05-12T09:31:08.505Z",
+            "image": "http://res.cloudinary.com/dxzlnojyv/image/upload/v1683883827/ezb0wxf46ahvqlum4g7v.jpg"
+        },
+        {
+            "id": "6432f791287ea4aec5cb594e",
+            "name": "Điện thoại Samsung Galaxy S23+ ",
+            "price": 18000000,
+            "original_price": 23000000,
+            "description": "Samsung Galaxy S20 FE được trang bị màn hình siêu tràn viền Infinity-O có kích thước 6.5 inch đi cùng tấm nền Super AMOLED, độ phân giải Full HD+ cho người dùng dễ dàng đắm chìm vào không gian giải trí lớn với những hình ảnh, nội dung hiển thị sắc nét nịnh mắt trên một màn ảnh vô cùng chất lượng. ",
+            "salient_features": "Laptop Acer Nitro 5 Gaming AN515 45 R6EV R5 (NH.QBMSV.006) gây ấn tượng mạnh mẽ với thiết kế cá tính cùng bộ cấu hình lý tưởng đến từ con chip AMD và card đồ họa rời dòng GTX, hứa hẹn sẽ là một người bạn đồng hành hoàn hảo dành cho các game thủ hay giới sáng tạo nội dung.",
+            "categoryId": "642a7fe3a72296ba8fab007d",
+            "comments": [],
+            "createdAt": "2023-04-09T17:36:17.346Z",
+            "updatedAt": "2023-05-12T09:32:02.924Z",
+            "image": "http://res.cloudinary.com/dxzlnojyv/image/upload/v1683883879/b3anabylxqlaz4nqmjyi.jpg"
+        }
+    ]
+}

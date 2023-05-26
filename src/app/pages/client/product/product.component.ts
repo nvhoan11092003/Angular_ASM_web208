@@ -1,8 +1,8 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
 import axios from 'axios';
-import { Product } from 'src/app/common/product';
-import { products } from 'src/app/data/products';
 import { Router } from '@angular/router';
+import { IProduct } from "src/app/common/product";
+import { ProductService } from 'src/app/services.service';
 
 @Component({
   selector: 'app-product',
@@ -10,13 +10,38 @@ import { Router } from '@angular/router';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-  product: Product[] = []
-  data = axios.get("http://localhost:8000/api/products")
-    .then((res) => {
-      this.product = res.data
+  status: boolean = false;
+  productName = "";
+  products: IProduct[] = []
+
+  // product!: IProduct;
+
+  constructor(private productService: ProductService) {
+    this.productService.getProducts().subscribe(data => {
+      this.products = data
+
 
     })
-    .catch((error) => console.log(error));
+    // console.log(this.products)
+  }
+
+
+
+
+  // getValue(e: any) {
+  //   this.productName = e.target.value;
+  // }
+  // changeStatus() {
+  //   this.status = !this.status;
+  // }
+  // removeItem(id: any) {
+  //   this.productService.deleteProduct(id).subscribe(() => {
+  //     this.products = this.products.filter(item => item._id !== id)
+  //   }, (error) => {
+  //     console.log(error.message)
+  //   })
+
+  // }
 
 
 
@@ -53,19 +78,26 @@ export class ProductComponent {
       left: 0,
       behavior: 'smooth'
     });
-  }
-  constructor(private router: Router) { }
+    // console.log(this.products);
 
-  ngOnInit() { }
-
-  viewDetail(productId: string | number) {
-    // Điều hướng đến trang chi tiết sản phẩm với productId
-    this.router.navigate(['/product', productId]);
   }
   VND = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
     currency: 'VND',
   });
+  // constructor(private router: Router) { }
+
+  // ngOnInit() { }
+
+  // viewDetail(productId: string | number) {
+  //   // Điều hướng đến trang chi tiết sản phẩm với productId
+  //   this.router.navigate(['/product', productId]);
+  // }
+  // VND = new Intl.NumberFormat('vi-VN', {
+  //   style: 'currency',
+  //   currency: 'VND',
+  // }
+  // );
 
 
 
