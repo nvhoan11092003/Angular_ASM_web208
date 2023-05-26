@@ -1,5 +1,6 @@
 import { iuser } from '../../../models/user';
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,14 +9,42 @@ import { Component } from '@angular/core';
 })
   
 export class SignUpComponent {
-  user : iuser = {
-    name: '',
-    email: '',
-    password: '',
-    Confirmpassword: ""
+  submited = false
+
+  signupform = new FormGroup({
+    name: new FormControl("", [Validators.required ]),
+    email : new FormControl("",[Validators.required ]),
+    password : new FormControl("",[Validators.required ]),
+    Confirmpassword : new FormControl("",[Validators.required ]),
+  })
+
+  get name() {
+    return this.signupform.get("name")
   }
-  onSubmit() {
-    console.log('Login submitted:', this.user);
-    // Goi API
+  get email() {
+    return this.signupform.get("email")
+  }
+  get password() {
+    return this.signupform.get("password")
+  }
+  get Confirmpassword() {
+    return this.signupform.get("Confirmpassword")
+  }
+  
+  onSubmit() { 
+
+    if (this.signupform.valid) {
+    
+      console.log('signup submitted:', this.signupform.value);
+        // Goi API
+    } else {
+      this.submited = true
+      console.log("invalid");
+      
+   
+
+    }
+
+  
   }
 }

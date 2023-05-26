@@ -27,6 +27,7 @@
 }
 
 .card img {
+    width: 100%;
     padding: 30px;
     transform: scale(1);
     transition: all 0.5s;
@@ -34,4 +35,41 @@
 
 .card img:hover {
     transform: scale(1.1);
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    flex: 0 0 18rem;
+    margin: 10px;
+}
+
+
+@media(min-width:768px) {
+
+    .product {
+        margin: 20px;
+    }
+
+
+    .products {
+        justify-content: center;
+    }
+}
+
+@media(min-width:1024px) {
+    .products {
+        justify-content: flex-start;
+    }
+
+    .product {
+        flex: 0 0 calc(25% - 20px);
+        /* Đặt kích thước của sản phẩm */
+        margin: 10px;
+        /* Khoảng cách giữa các sản phẩm */
+    }
 }
