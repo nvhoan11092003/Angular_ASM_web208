@@ -6,11 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-// import { ProductComponent } from './components/product/product.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { MatAutocompleteModule } from '@angular/material/autocomplete';
-// import { MatInputModule } from '@angular/material/input';
 import { SignUpComponent } from './pages/client/sign-up/sign-up.component';
 import { SignInComponent } from './pages/client/sign-in/sign-in.component';
 import { FormsModule } from '@angular/forms';
@@ -24,7 +21,7 @@ import { ProductComponent } from './pages/client/product/product.component';
 import { CommonModule } from '@angular/common';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,8 +47,8 @@ import { BlogComponent } from './pages/client/blog/blog.component';
     BrowserAnimationsModule,
     // MatAutocompleteModule,
     // MatInputModule
-    FormsModule, CommonModule
-    , HttpClientModule
+    FormsModule, CommonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent,
