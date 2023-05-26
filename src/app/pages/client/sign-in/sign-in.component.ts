@@ -1,4 +1,5 @@
-import { iuser } from '../../../models/user';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,15 +8,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
-  user : iuser = {
-    name: '',
-    email: '',
-    password: '',
-    Confirmpassword: ""
+  submited = false
+
+  signinform = new FormGroup({
+    email : new FormControl("",[Validators.required ]),
+    password : new FormControl("",[Validators.required ]),
+  })
+  get email() {
+    return this.signinform.get("email")
   }
-  onSubmit() {
-    console.log('Login submitted:', this.user);
-    // Goi API
+  get password() {
+    return this.signinform.get("password")
+  }
+
+  
+  onSubmit() { 
+    if (this.signinform.valid) {
+
+      console.log('Login submitted:', this.signinform.value);
+        // Goi API
+    } else {
+      this.submited = true
+      console.log("invalid");
+
+    }
+
+  
   }
 
 }
