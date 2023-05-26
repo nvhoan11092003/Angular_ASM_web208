@@ -1,49 +1,67 @@
-<script
-	type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<section>
-	<div class="main-w3layouts wrapper">
-		<h1> SignUp </h1>
-		<div class="main-agileinfo">
-			<div class="agileits-top">
-				<form (ngSubmit)="onSubmit()">
-					<input class="text" type="text" [(ngModel)]="user.name" name="Username" placeholder="Username"
-						required="">
-					<input class="text email" type="email" name="email" [(ngModel)]="user.email" placeholder="Email"
-						required="">
-					<input class="text" type="password" name="password" [(ngModel)]="user.password"
-						placeholder="Password" required="">
-					<input class="text w3lpass" type="password" name="Confirmpassword"
-						[(ngModel)]="user.Confirmpassword" placeholder="Confirm Password" required="">
-					<div class="wthree-text">
-						<label class="anim">
-							<input type="checkbox" class="checkbox" required="">
-							<span>I Agree To The Terms & Conditions</span>
-						</label>
-						<div class="clear"> </div>
+<section class=" bg-image my-10 py-5"
+	style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+	<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+		<div class="container h-100">
+			<div class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col-12 col-md-9 col-lg-7 col-xl-6">
+					<div class="card" style="border-radius: 15px;">
+						<div class="card-body p-5">
+							<h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+							<form (ngSubmit)="onSubmit()">
+
+								<div class="form-outline mb-4">
+									<label class="form-label" for="form3Example1cg">Your Name</label>
+									<input type="text" id="form3Example1cg" [(ngModel)]="user.name" name="Username"
+										placeholder="Username" class="form-control form-control-lg" />
+								</div>
+
+								<div class="form-outline mb-4">
+									<label class="form-label" for="form3Example3cg">Your Email</label>
+									<input type="email" name="email" [(ngModel)]="user.email" placeholder="Email"
+										id="form3Example3cg" class="form-control form-control-lg" />
+								</div>
+
+								<div class="form-outline mb-4">
+									<label class="form-label" for="form3Example4cg">Password</label>
+									<input type="password" name="password" [(ngModel)]="user.password"
+										placeholder="Password" id="form3Example4cg"
+										class="form-control form-control-lg" />
+								</div>
+
+								<div class="form-outline mb-4">
+									<label class="form-label" for="form3Example4cdg">Repeat your password</label>
+									<input type="password" name="Confirmpassword" [(ngModel)]="user.Confirmpassword"
+										placeholder="Confirm Password" id="form3Example4cdg"
+										class="form-control form-control-lg" />
+								</div>
+
+								<div class="form-check d-flex justify-content-center mb-5">
+									<label class="form-check-label" for="form2Example3g">
+										I agree all statements in <a href="#!" class="text-body"><u>Terms of
+												service</u></a>
+									</label>
+									<input class="form-check-input me-2" type="checkbox" value="" id="form2Example3g" />
+
+								</div>
+
+								<div class="d-flex justify-content-center">
+
+									<input type="submit"
+										class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+										value="Register">
+
+								</div>
+
+								<p class="text-center text-muted mt-5 mb-0">Have already an account? <a
+										routerLink="/signin" class="fw-bold text-body"><u>Login here</u></a></p>
+
+							</form>
+
+						</div>
 					</div>
-					<input type="submit" value="SIGN UP">
-				</form>
-				<p>Don't have an Account? <a href="/signin"> Login Now!</a></p>
+				</div>
 			</div>
 		</div>
-		<!-- copyright -->
-		<div class="colorlibcopy-agile">
-			<p>© 2018 Colorlib Signup Form. All rights reserved | Design by <a href="https://colorlib.com/"
-					target="_blank">Colorlib</a></p>
-		</div>
-
-		<ul class="colorlib-bubbles">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
 	</div>
-
 </section>
