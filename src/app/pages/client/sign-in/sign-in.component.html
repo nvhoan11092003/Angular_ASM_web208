@@ -2,27 +2,9 @@
   <div class="form">
     <h1>Sign-in</h1>
     <br>
-    <form [formGroup]="signinform" class="login-form" (ngSubmit)="onSubmit()">
-      <input type="text" [ngClass]="{'is-invalid': submited && email  && email.invalid }" placeholder="Email"
-        formControlName="email" name="email" />
-      <!-- show errer -->
-      <div class="text-danger">
-        <i *ngIf="submited && email && email.invalid " class="fa fa-times text-danger"></i>
-        <span *ngIf="submited && email && email.invalid ">
-          email is required
-        </span>
-
-      </div>
-      <input type="password" formControlName="password"
-        [ngClass]="{'is-invalid': submited && password  && password.invalid }" placeholder="password" name="password" />
-      <!-- show errer -->
-      <div class="text-danger">
-        <i *ngIf="submited && password && password.invalid " class="fa fa-times text-danger"></i>
-        <span *ngIf="submited && password && password.invalid ">
-          password is required
-        </span>
-
-      </div>
+    <form class="login-form" (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="username" name="name" [(ngModel)]="user.email" />
+      <input type="password" placeholder="password" name="password" [(ngModel)]="user.password" />
       <input type="submit" value="SIGN IN" id="submit">
       <p class="message">Not registered? <a href="signup">Create an account</a></p>
     </form>

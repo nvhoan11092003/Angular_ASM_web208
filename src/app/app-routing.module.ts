@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './layout/layout/layout.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
+// import { SigninComponent } from './pages/signin/signin.component';
 
 const routes: Routes = [
 
