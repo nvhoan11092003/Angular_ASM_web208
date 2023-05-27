@@ -1,7 +1,7 @@
 <section class="container-xxl mt-3 mb-3">
     <h2>Điện thoại nổi bật</h2>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col" *ngFor="let product of products; let i = index">
+    <div class="products row-cols-1 row-cols-md-4 g-4">
+        <div class="product" *ngFor="let product of products; let i = index">
             <div class="card" style="width: 18rem;">
                 <a (click)="gotoTop()" [routerLink]="['/product',product.id]"> <img [src]="product.image"
                         class="card-img-top" alt="image sản phẩm"></a>
