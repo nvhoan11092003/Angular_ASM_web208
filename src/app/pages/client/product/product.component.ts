@@ -12,13 +12,13 @@ import { ProductService } from 'src/app/services.service';
 export class ProductComponent {
   status: boolean = false;
   productName = "";
-  products: IProduct[] = []
+  products: any = []
 
   // product!: IProduct;
 
   constructor(private productService: ProductService) {
     this.productService.getProducts().subscribe(data => {
-      this.products = data
+      this.products = data.products
 
 
     })
@@ -62,7 +62,7 @@ export class ProductComponent {
 
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    console.log('[scroll]', scrollPosition);
+    // console.log('[scroll]', scrollPosition);
 
     if (scrollPosition >= this.topPosToStartShowing) {
       this.isShow = true;

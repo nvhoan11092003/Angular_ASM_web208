@@ -1,0 +1,23 @@
+<div class="mt-3">
+    <h5>Hãng sản xuất</h5>
+    <div class="grid grid-cols-2">
+        <p><input [(ngModel)]="all" type="checkbox" (click)="check()" value="a" name="all"> <label for="all">Tất
+                cả</label></p>
+        <p *ngFor="let category of categories">
+            <input class="cate" type="checkbox" name="cate" value=""><label for="cate">{{category.name}}</label>
+        </p>
+    </div>
+
+</div>
+<div>
+    <h5>Mức giá</h5>
+    <div class="grid grid-cols-1">
+        <p><input type="checkbox" checked> Tất cả</p>
+        <p><input type="checkbox">Dưới 2 triệu</p>
+        <p><input type="checkbox">Từ 2-4 triệu</p>
+        <p><input type="checkbox">Từ 4-7 triệu</p>
+        <p><input type="checkbox">Từ 7-13 triệu</p>
+        <p><input type="checkbox">Trên 13 triệu</p>
+    </div>
+
+</div>

@@ -14,7 +14,7 @@ import { ProductService } from 'src/app/services.service';
   styleUrls: ['./detail.component.css'],
 })
 export class DetailComponent implements OnInit {
-  product!: IProduct;
+  product!: any;
   productForm = this.formBuilder.group({
     name: [''],
     price: 0
@@ -44,6 +44,8 @@ export class DetailComponent implements OnInit {
     this.route.paramMap.subscribe((params) => {
       const id = params.get('id');
       this.productService.getProduct(id).subscribe(product => {
+        console.log(product);
+
         this.product = product;
       })
     });

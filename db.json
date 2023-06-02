@@ -1,4 +1,12 @@
 {
+    "user": [
+        {
+            "id": 1,
+            "username": "quan123",
+            "email": "quan123@gmail.com",
+            "password": "123456"
+        }
+    ],
     "products": [
         {
             "id": "642cec5fab74c414f7674546",

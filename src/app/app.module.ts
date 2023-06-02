@@ -23,6 +23,7 @@ import { ProductComponent } from './pages/client/product/product.component';
 import { CommonModule } from '@angular/common';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
+import { CategoryComponent } from './pages/client/category/category.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { BlogComponent } from './pages/client/blog/blog.component';
     MenuComponent,
     NotFoundComponent,
     BlogComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,
