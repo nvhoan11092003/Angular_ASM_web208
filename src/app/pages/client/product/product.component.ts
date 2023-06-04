@@ -1,6 +1,8 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
-import { products } from 'src/app/data/products';
+import axios from 'axios';
 import { Router } from '@angular/router';
+import { IProduct } from "src/app/common/product";
+import { ProductService } from 'src/app/services.service';
 
 @Component({
   selector: 'app-product',
@@ -8,7 +10,47 @@ import { Router } from '@angular/router';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-  product = products
+  status: boolean = false;
+  productName = "";
+  products: IProduct[] = []
+
+  // product!: IProduct;
+
+  constructor(private productService: ProductService) {
+    this.productService.getProducts().subscribe(data => {
+      this.products = data
+
+
+    })
+    // console.log(this.products)
+  }
+
+
+
+
+  // getValue(e: any) {
+  //   this.productName = e.target.value;
+  // }
+  // changeStatus() {
+  //   this.status = !this.status;
+  // }
+  // removeItem(id: any) {
+  //   this.productService.deleteProduct(id).subscribe(() => {
+  //     this.products = this.products.filter(item => item._id !== id)
+  //   }, (error) => {
+  //     console.log(error.message)
+  //   })
+
+  // }
+
+
+
+
+
+
+
+
+
 
   isShow: boolean = false;
   topPosToStartShowing = 100;
@@ -32,18 +74,31 @@ export class ProductComponent {
       left: 0,
       behavior: 'smooth'
     });
-  }
-  constructor(private router: Router,) { }
+    // console.log(this.products);
 
-  ngOnInit() { }
-
-  viewDetail(productId: string | number) {
-    // Điều hướng đến trang chi tiết sản phẩm với productId
-    this.router.navigate(['/product', productId]);
   }
   VND = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
     currency: 'VND',
   });
+  // constructor(private router: Router) { }
+
+  // ngOnInit() { }
+
+  // viewDetail(productId: string | number) {
+  //   // Điều hướng đến trang chi tiết sản phẩm với productId
+  //   this.router.navigate(['/product', productId]);
+  // }
+  // VND = new Intl.NumberFormat('vi-VN', {
+  //   style: 'currency',
+  //   currency: 'VND',
+  // }
+  // );
+
+
+
+
+
+
 
 }

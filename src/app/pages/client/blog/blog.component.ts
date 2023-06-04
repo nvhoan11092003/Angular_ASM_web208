@@ -1,5 +1,5 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
-import { products } from 'src/app/data/products';
+// import { products } from 'src/app/data/products';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-blog',
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent {
-  product = products;
+  // product = products;
 
   isShow: boolean = false;
   topPosToStartShowing = 100;

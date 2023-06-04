@@ -1,21 +1,21 @@
 <section class="container-xxl mt-3 mb-3">
     <h2>Điện thoại nổi bật</h2>
-    <div class="products">
-        <div class="product " *ngFor="let items of product">
+    <div class="products row-cols-1 row-cols-md-4 g-4">
+        <div class="product" *ngFor="let product of products; let i = index">
             <div class="card" style="width: 18rem;">
-                <a (click)="gotoTop()" [routerLink]="['/product',items.id]"> <img [src]="items.images[0].base_url"
+                <a (click)="gotoTop()" [routerLink]="['/product',product.id]"> <img [src]="product.image"
                         class="card-img-top" alt="image sản phẩm"></a>
                 <p class="cart-item">Trả góp 0%</p>
                 <p class="cart-item1">Giảm 7.000.000đ</p>
                 <div class="card-body">
-                    <h5 class="card-title">{{items.name}}</h5>
+                    <h5 class="card-title">{{product.name}}</h5>
                     <div class="d-flex">
-                        <p class="card-text text-danger fs-5 me-5">{{VND.format(items.price)}}</p>
-                        <p class="card-text mt-1">{{VND.format(items.original_price)}}</p>
+                        <p class="card-text text-danger fs-5 me-5">{{VND.format(product.price)}}</p>
+                        <p class="card-text mt-1">{{VND.format(product.original_price)}}</p>
                     </div>
-                    <p>Thương hiệu : <label class="text-primary fw-bold"> {{items.brand.name}}</label></p>
-                    <button (click)="viewDetail(items.id) ;gotoTop()" *ngIf="isShow" class="btn btn-primary">xem chi
-                        tiết</button>
+                    <!-- <p>Thương hiệu : <label class="text-primary fw-bold"> {{product.}}</label></p> -->
+                    <!-- <button (click)="viewDetail(product._id) ;gotoTop()" *ngIf="isShow" class="btn btn-primary">xem chi
+                        tiết</button> -->
 
                 </div>
             </div>

@@ -1,40 +1,100 @@
-<header class=" bg-[#cd1817] ">
-    <div class="flex justify-between h-[56px] p-[10px] items-center md:container md:mx-auto mx-auto">
-        <a routerLink="home" class="text-[#ffffff] text-3xl">HOME</a>
-        <div class="flex">
-            <input type="text" placeholder="Nhập tên sản phẩm" class="h-[38px] w-[400px] p-2 rounded-l-sm outline-none">
-            <button class="bg-[#333]  h-[38px] w-[58px]  rounded-r-sm">
-                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
-            </button>
-        </div>
+<nav class="nav-mb navbar navbar-dark bg-[#cd1817] mb-4  ">
+    <div class="container-fluid">
 
-        <div class="flex space-x-2">
-            <div class="text-center">
-                <i class="fa-solid fa-file-lines fa-lg" style="color: #ffffff;"></i>
-                <p class="text-[#ffffff]">
-                    <a href="/blog" class="text-decoration-none text-light">Thông tin hay</a>
-                </p>
+        <a class="navbar-brand" href="#">HOME</a>
 
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
             </div>
-            <div class="text-center">
-                <i class="fa-solid fa-file-invoice-dollar fa-lg" style="color: #ffffff;"></i>
-                <p class="text-[#ffffff]">
-                    Thanh toán & tiện ích
-                </p>
-            </div>
-            <a routerLink="signin" class="text-center">
-                <i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i>
-                <p class="text-[#ffffff]">
-                    Tài khoản của tôi
-                </p>
-            </a>
-            <div class="text-center">
-                <i class="fa-sharp fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i>
-                <p class="text-[#ffffff]">
-                    Giỏ hàng
-                </p>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup">Đăng ký</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signin">Đăng nhập</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
             </div>
         </div>
     </div>
-</header>
+</nav>
+
+<div class="nav-pc ">
+    <header class=" bg-[#cd1817] ">
+        <div class="flex justify-between h-[56px] p-[10px] items-center container mx-auto">
+            <a routerLink="" class="text-[#ffffff] text-3xl">HOME</a>
+
+            <div class="flex">
+                <input type="text" placeholder="Nhập tên sản phẩm"
+                    class="h-[38px] w-[400px] p-2 rounded-l-sm outline-none">
+                <button class="bg-[#333]  h-[38px] w-[58px]  rounded-r-sm">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                </button>
+            </div>
+
+            <div class="flex space-x-2">
+                <div class="text-center">
+                    <i class="fa-solid fa-file-lines fa-lg" style="color: #ffffff;"></i>
+                    <p class="text-[#ffffff]">
+                        <a href="/blog" class="text-decoration-none text-light">Thông tin hay</a>
+                    </p>
+
+
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-file-invoice-dollar fa-lg" style="color: #ffffff;"></i>
+                    <p class="text-[#ffffff]">
+                        Thanh toán & tiện ích
+                    </p>
+                </div>
+                <a routerLink="signin" class="text-center">
+                    <i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i>
+                    <p class="text-[#ffffff]">
+                        Tài khoản của tôi
+                    </p>
+                </a>
+                <div class="text-center">
+                    <i class="fa-sharp fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i>
+                    <p class="text-[#ffffff]">
+                        Giỏ hàng
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <app-menu></app-menu>
+</div>
