@@ -13,20 +13,19 @@ import { IProduct } from './common/product';
 export class ProductService {
   constructor(private http: HttpClient) { }
 
-
-  getProducts(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>('http://localhost:3000/products');
+  getProducts(): Observable<any> {
+    return this.http.get<IProduct[]>('http://localhost:8080/api/products');
   }
   getProduct(id: any): Observable<IProduct> {
     return this.http.get<IProduct>('http://localhost:3000/products/' + id);
   }
-  deleteProduct(id: number | string): Observable<IProduct> {
+  deleteProduct(id: number | string | undefined): Observable<IProduct> {
     return this.http.delete<IProduct>('http://localhost:8080/api/products/' + id);
   }
   addProduct(product: IProduct): Observable<IProduct> {
     return this.http.post<IProduct>('http://localhost:3000/products/', product);
   }
   updateProduct(product: IProduct): Observable<IProduct> {
-    return this.http.put<IProduct>(`http://localhost:8080/api/products/${product.id}`, product);
+    return this.http.put<IProduct>(`http://localhost:8080/api/products/${product._id}`, product);
   }
 }

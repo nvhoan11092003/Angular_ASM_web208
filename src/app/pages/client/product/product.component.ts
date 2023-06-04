@@ -1,5 +1,5 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
-import axios from 'axios';
+// import axios from 'axios';
 import { Router } from '@angular/router';
 import { IProduct } from "src/app/common/product";
 import { ProductService } from 'src/app/services.service';
@@ -20,37 +20,9 @@ export class ProductComponent {
     this.productService.getProducts().subscribe(data => {
       this.products = data
 
-
     })
     // console.log(this.products)
   }
-
-
-
-
-  // getValue(e: any) {
-  //   this.productName = e.target.value;
-  // }
-  // changeStatus() {
-  //   this.status = !this.status;
-  // }
-  // removeItem(id: any) {
-  //   this.productService.deleteProduct(id).subscribe(() => {
-  //     this.products = this.products.filter(item => item._id !== id)
-  //   }, (error) => {
-  //     console.log(error.message)
-  //   })
-
-  // }
-
-
-
-
-
-
-
-
-
 
   isShow: boolean = false;
   topPosToStartShowing = 100;
