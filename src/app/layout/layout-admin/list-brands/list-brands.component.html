@@ -1,0 +1,32 @@
+<div class="container-xxl">
+    <app-header-admin></app-header-admin>
+    <div class="row row-cols-2">
+        <app-categorys class="col-2"></app-categorys>
+        <div class="col-10">
+            <div class="">
+                <h2>Danh sách Thương hiệu</h2>
+                <a routerLink="/admin/add-brand" class="btn btn-primary mb-4">Thêm thương hiệu</a>
+                <table class=" table table-bordered table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sản phẩm a</td>
+                            <td>
+                                <a href="/admin/update-product"><span
+                                        class="material-symbols-outlined me-2">edit</span></a>
+                                <button><span class="material-symbols-outlined">delete</span></button>
+
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

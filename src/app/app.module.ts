@@ -22,6 +22,14 @@ import { CommonModule } from '@angular/common';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CategorysComponent } from './layout/layout-admin/categorys/categorys.component';
+import { ListProductsComponent } from './layout/layout-admin/list-products/list-products.component';
+import { AddProductsComponent } from './layout/layout-admin/add-products/add-products.component';
+import { UpdateProductsComponent } from './layout/layout-admin/update-products/update-products.component';
+import { ListUsersComponent } from './layout/layout-admin/list-users/list-users.component';
+import { ListBrandsComponent } from './layout/layout-admin/list-brands/list-brands.component';
+import { AddBrandComponent } from './layout/layout-admin/add-brand/add-brand.component';
+import { UpdateBrandComponent } from './layout/update-brand/update-brand.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +48,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     MenuComponent,
     NotFoundComponent,
     BlogComponent,
+    CategorysComponent,
+    ListProductsComponent,
+    AddProductsComponent,
+    UpdateProductsComponent,
+    ListUsersComponent,
+    ListBrandsComponent,
+    AddBrandComponent,
+    UpdateBrandComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +64,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     // MatAutocompleteModule,
     // MatInputModule
     FormsModule, CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent,
