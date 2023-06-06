@@ -24,7 +24,6 @@ export class SignInComponent {
   
   onSubmit() { 
     if (this.signinform.valid) {
-
       console.log('Login submitted:', this.signinform.value);
         // Goi API
     } else {
