@@ -4,8 +4,8 @@ export interface IProduct {
     price: number,
     original_price: number,
     description: string,
-    categoryId: string
+    categoryId?: string
     salient_features?: string,
-    comments: string,
+    comments?: string,
     image?: string,
 }

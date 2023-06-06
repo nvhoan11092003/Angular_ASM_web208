@@ -18,7 +18,7 @@ export class ProductComponent {
 
   constructor(private productService: ProductService) {
     this.productService.getProducts().subscribe(data => {
-      this.products = data
+      this.products = data.products
 
     })
     // console.log(this.products)
