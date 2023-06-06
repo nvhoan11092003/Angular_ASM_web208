@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ICategories } from 'src/app/common/categories';
 import { ProductService } from 'src/app/services.service';
 
@@ -17,7 +17,8 @@ export class UpdateBrandComponent {
   constructor(
     private productService: ProductService,
     private route: ActivatedRoute,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router,
   ) {
     this.route.paramMap.subscribe(param => {
       const id = param.get('id');
@@ -38,7 +39,8 @@ export class UpdateBrandComponent {
         name: this.cateForm.value.name || "",
       }
       this.productService.updateCategpry(category).subscribe(data => {
-        console.log(data)
+        alert("Cập nhật thành công");
+        this.router.navigate(['/admin/brands'])
       })
     }
   }
