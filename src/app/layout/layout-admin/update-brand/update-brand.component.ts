@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ICategories } from 'src/app/common/categories';
 import { ProductService } from 'src/app/services.service';
@@ -12,7 +12,7 @@ import { ProductService } from 'src/app/services.service';
 export class UpdateBrandComponent {
   categorys!: ICategories;
   cateForm = this.formBuilder.group({
-    name: [''],
+    name: ['', Validators.required],
   })
   constructor(
     private productService: ProductService,
@@ -24,7 +24,6 @@ export class UpdateBrandComponent {
       const id = param.get('id');
       this.productService.getCate(id).subscribe(categorys => {
         this.categorys = categorys;
-
         this.cateForm.patchValue({
           name: categorys.name,
         })
