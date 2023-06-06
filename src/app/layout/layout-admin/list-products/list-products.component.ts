@@ -14,13 +14,13 @@ export class ListProductsComponent {
     this.productService.getProducts().subscribe(data => {
       this.products = data?.products
     })
-
   }
   handleDelete(id: string | number | undefined) {
     const confilm = window.confirm("Bạn có muốn xóa không ?");
     if (confilm) {
       this.productService.deleteProduct(id).subscribe(() => {
         this.products.filter(item => item._id !== id)
+        alert("xóa thành công")
       })
     }
   }

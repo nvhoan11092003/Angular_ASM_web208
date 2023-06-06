@@ -23,7 +23,8 @@
                 <td>{{item.description}}</td>
                 <td>{{item.salient_features}}</td>
                 <td>
-                    <a href="/admin/update-product"><span class="material-symbols-outlined me-2">edit</span></a>
+                    <a [routerLink]="['/admin/update-product/',item._id]"><span
+                            class="material-symbols-outlined me-2">edit</span></a>
                     <button (click)="handleDelete(item._id)"><span
                             class="material-symbols-outlined">delete</span></button>
                 </td>

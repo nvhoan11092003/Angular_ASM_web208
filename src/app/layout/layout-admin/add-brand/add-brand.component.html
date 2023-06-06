@@ -1,1 +1,19 @@
-<p>add-brand works!</p>
+<div class="container-xxl">
+    <app-header-admin></app-header-admin>
+    <div class="row row-cols-2">
+        <app-categorys class="col-2"></app-categorys>
+        <div class="col-10">
+            <h2>Thêm Thương hiệu</h2>
+            <form (ngSubmit)="onHandleSubmit()" [formGroup]="cateForm">
+                <div class="row row-cols-2">
+                    <div>
+                        <label for="" class="form-lable mb-2">Name</label>
+                        <input type="text" formControlName="name" class="form-control">
+                    </div>
+                </div>
+                <button class="btn btn-primary mt-5">Thêm mới</button>
+            </form>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

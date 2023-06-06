@@ -49,13 +49,13 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'categorys', component: CategorysComponent },
       { path: 'add-product', component: AddProductsComponent },
-      { path: 'update-product', component: UpdateProductsComponent },
+      { path: 'update-product/:id', component: UpdateProductsComponent },
       { path: 'accounts', component: ListUsersComponent },
 
       //brand
       { path: 'brands', component: ListBrandsComponent },
       { path: 'add-brand', component: AddBrandComponent },
-      { path: 'update-brand', component: UpdateBrandComponent },
+      { path: 'update-brand/:id', component: UpdateBrandComponent },
     ],
   },
   { path: '**', component: NotFoundComponent }

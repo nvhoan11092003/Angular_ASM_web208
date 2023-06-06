@@ -1,7 +1,7 @@
 <div class="container-xxl">
 
     <app-header-admin></app-header-admin>
-    <div class="row row-cols-2">
+    <div class="row row-cols-2 ">
         <app-categorys class="col-2"></app-categorys>
         <div class="col-10">
             <h2>Danh sách tài khoản</h2>
@@ -19,18 +19,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td></td>
-                        <td>Sản phẩm a</td>
-                        <td>200000</td>
-                        <td>30000</td>
-                        <td><img src="https://www.techone.vn/wp-content/uploads/2022/09/14-prm-den-1.jpg" width="50px"
-                                alt="">
+                    <tr *ngFor="let item of users;index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.password}}</td>
+                        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMx1itTXTXLB8p4ALTTL8mUPa9TFN_m9h5VQ&usqp=CAU"
+                                width="50px" alt="">
                         </td>
-                        <td>hahaha</td>
-                        <td>Apple</td>
+                        <td>Thái bình</td>
+                        <td>{{item.role}}</td>
                         <td style="text-align: center">
-                            <button><span class="material-symbols-outlined">delete</span></button>
+                            <button (click)="handleDelete(item._id)"><span
+                                    class="material-symbols-outlined">delete</span></button>
 
                         </td>
 
