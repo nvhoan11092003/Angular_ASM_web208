@@ -1,5 +1,5 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
-import axios from 'axios';
+// import axios from 'axios';
 import { Router } from '@angular/router';
 import { IProduct } from "src/app/common/product";
 import { ProductService } from 'src/app/services.service';
@@ -36,9 +36,6 @@ export class ProductComponent {
     })
     this.categoriesService.getCategories().subscribe(data => {
       this.categories = data.categorys
-
-
-
     })
 
   }

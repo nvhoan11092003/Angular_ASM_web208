@@ -1,0 +1,53 @@
+<div class="container-xxl">
+    <app-header-admin></app-header-admin>
+    <div class="row row-cols-2">
+        <app-categorys class="col-2"></app-categorys>
+        <div class="col-10">
+            <h2>Cập nhật sản phẩm</h2>
+            <form action="" (ngSubmit)="onHandleEdit()" [formGroup]="productForm">
+                <div class="row row-cols-2">
+                    <div>
+                        <label for="" class="form-lable mb-2">Name</label>
+                        <input type="text" class="form-control" formControlName="name">
+
+                    </div>
+                    <div>
+                        <label for="" class="form-lable mb-2">Price</label>
+                        <input type="number" min="0" class="form-control" formControlName="price">
+
+                    </div>
+                    <div>
+                        <label for="" class="form-lable mb-2">Orinal_price</label>
+                        <input type="number" min="0" class="form-control " formControlName="original_price">
+
+                    </div>
+                    <div>
+                        <label for="" class="form-lable mb-2">Image</label>
+                        <input type="file" class="form-control" (change)="HandleGetfile($event)" #fileUpload
+                            onchange="console.log(event.target.files)" formControlName="image">
+                    </div>
+                    <div>
+                        <label for="" class="form-lable mb-2">description</label>
+                        <textarea class="form-control" cols="10" rows="5" formControlName="description"
+                            placeholder="Nhập mô tả">
+                       </textarea>
+                    </div>
+                    <div>
+                        <label for="" class="form-lable mb-2"> salient_features</label>
+                        <textarea class="form-control" cols="10" rows="5" formControlName="salient_features"
+                            placeholder="Nhập mô tả dài">
+                       </textarea>
+                    </div>
+                    <div>
+                        <select class="form-select mt-4" formControlName="categoryId">
+                            <option value="">Lựa chọn</option>
+                            <option *ngFor="let item of categorys" [value]="item._id">{{item.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary mt-5">Cập nhật sản phẩm</button>
+            </form>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

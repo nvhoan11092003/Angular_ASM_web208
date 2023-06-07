@@ -23,12 +23,7 @@ export class DetailComponent implements OnInit {
     private productService: ProductService,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder
-  ) {
-
-
-
-  }
-
+  ) { }
 
   // product: any;
 
