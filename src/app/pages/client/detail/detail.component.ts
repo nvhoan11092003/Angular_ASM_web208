@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import axios from 'axios';
+// import axios from 'axios';
 import { IProduct } from 'src/app/common/product';
 import { ProductService } from 'src/app/services.service';
 // import { Product } from 'src/app/common/product';
