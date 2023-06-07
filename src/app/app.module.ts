@@ -20,7 +20,7 @@ import { ProductComponent } from './pages/client/product/product.component';
 import { CommonModule } from '@angular/common';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
-import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +39,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MenuComponent,
     NotFoundComponent,
     BlogComponent,
-    CategoryComponent,
+
 
 
   ],
@@ -50,7 +50,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     // MatAutocompleteModule,
     // MatInputModule\
     HttpClientModule,
-
+    ReactiveFormsModule,
     FormsModule, CommonModule
   ],
   providers: [],
