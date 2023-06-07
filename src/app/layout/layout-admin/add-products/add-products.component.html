@@ -23,7 +23,9 @@
                     </div>
                     <div>
                         <label for="" class="form-lable mb-2">Image</label>
-                        <input type="file" class="form-control" formControlName="image">
+                        <input type="file" class="form-control file-upload" (change)="HandleGetfile($event)" #fileUpload
+                            onchange="console.log(event.target.files)" formControlName="image">
+
                     </div>
                     <div>
                         <label for="" class="form-lable mb-2">description</label>
