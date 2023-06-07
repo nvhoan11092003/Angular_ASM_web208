@@ -9,7 +9,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignUpComponent } from './pages/client/sign-up/sign-up.component';
 import { SignInComponent } from './pages/client/sign-in/sign-in.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutAdminComponent } from './layout/layout-admin/layout-admin.component';
 import { LayoutComponent } from './layout/layout/layout.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
@@ -39,6 +39,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MenuComponent,
     NotFoundComponent,
     BlogComponent,
+    CategoryComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -48,10 +51,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     // MatInputModule\
     HttpClientModule,
 
-    FormsModule, CommonModule,
-    // MatInputModule
-
-    ReactiveFormsModule
+    FormsModule, CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent,

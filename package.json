@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
-    "build": "ng build",
+    "build": "concurrently \"json-server --watch db.json\" \"npm run start\"",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev": "concurrently \"json-server --watch db.json\" \"npm run start\""
   },
   "private": true,
   "dependencies": {
@@ -22,6 +23,7 @@
     "@angular/router": "^16.0.0",
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0-alpha3",
+    "concurrently": "^8.0.1",
     "flowbite": "^1.6.5",
     "json-server": "^0.17.3",
     "rxjs": "~7.8.0",
