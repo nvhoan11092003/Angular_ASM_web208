@@ -12,8 +12,6 @@ export class UploadServiceService {
   constructor(private http: HttpClient) { }
   uploadFile(file: File) {
     console.log(file);
-
-
     const formData = new FormData();
     formData.append("upload_preset", this.PRESET_NAME);
     formData.append("folder", this.FOLDER_NAME);
