@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { CategoriesService } from 'src/app/categories.service';
 
 @Component({
@@ -7,28 +8,10 @@ import { CategoriesService } from 'src/app/categories.service';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent {
-  cate = document.querySelectorAll('.cate')
-  all: any;
-
-  check() {
 
 
-    if (this.all) {
-      console.log("hello");
-
-    }
+  constructor() {
 
   }
 
-
-  categories: any = []
-
-
-  constructor(private categoriesService: CategoriesService) {
-    this.categoriesService.getCategories().subscribe(data => {
-      this.categories = data.categorys
-
-
-    })
-  }
 }

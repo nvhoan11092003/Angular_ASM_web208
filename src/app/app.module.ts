@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MatInputModule } from '@angular/material/input';
 import { SignUpComponent } from './pages/client/sign-up/sign-up.component';
 import { SignInComponent } from './pages/client/sign-in/sign-in.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LayoutAdminComponent } from './layout/layout-admin/layout-admin.component';
 import { LayoutComponent } from './layout/layout/layout.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
@@ -24,7 +24,8 @@ import { CommonModule } from '@angular/common';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BlogComponent } from './pages/client/blog/blog.component';
 import { CategoryComponent } from './pages/client/category/category.component';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,8 @@ import { CategoryComponent } from './pages/client/category/category.component';
     NotFoundComponent,
     BlogComponent,
     CategoryComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,10 @@ import { CategoryComponent } from './pages/client/category/category.component';
     // MatInputModule\
     HttpClientModule,
 
-    FormsModule, CommonModule
+    FormsModule, CommonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent,

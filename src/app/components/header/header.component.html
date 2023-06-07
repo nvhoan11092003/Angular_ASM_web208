@@ -58,13 +58,24 @@
         <div class="flex justify-between h-[56px] p-[10px] items-center container mx-auto">
             <a routerLink="" class="text-[#ffffff] text-3xl">HOME</a>
 
-            <div class="flex">
-                <input type="text" placeholder="Nhập tên sản phẩm"
-                    class="h-[38px] w-[400px] p-2 rounded-l-sm outline-none">
+            <div class="flex relative z-40">
+                <input (focus)="show()" [(ngModel)]="filterValue" (keyup)="filterList()" type="text"
+                    placeholder="Nhập tên sản phẩm" class="h-[38px] w-[400px] p-2 rounded-l-sm outline-none">
                 <button class="bg-[#333]  h-[38px] w-[58px]  rounded-r-sm">
                     <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
                 </button>
+                <ul class="absolute z-10 bg-white top-[40px] left-[0] w-[458px] " *ngIf="display">
+                    <a *ngFor="let item of filteredItemList" [href]="['/product/'+item._id]">
+                        <li class="p-2 ">{{ item.name }}</li>
+                    </a>
+                </ul>
+
             </div>
+            <div (click)="hide()" *ngIf="display"
+                class="z-30 h-[100%] opacity-[0.5] bg-gray-500 absolute top-0 bottom-[0%] right-0 left-0">
+
+            </div>
+
 
             <div class="flex space-x-2">
                 <div class="text-center">
