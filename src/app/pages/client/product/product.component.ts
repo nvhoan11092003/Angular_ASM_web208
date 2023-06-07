@@ -1,5 +1,5 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
-import axios from 'axios';
+// import axios from 'axios';
 import { Router } from '@angular/router';
 import { IProduct } from "src/app/common/product";
 import { ProductService } from 'src/app/services.service';
@@ -38,21 +38,13 @@ export class ProductComponent {
   nextPage() {
     this.currentPage++;
   }
-
-
   constructor(private productService: ProductService, private categoriesService: CategoriesService, private fb: FormBuilder) {
     this.productService.getProducts().subscribe(data => {
       this.products = data.products
       console.log(this.products.length);
-
-
-
     })
     this.categoriesService.getCategories().subscribe(data => {
       this.categories = data.categorys
-
-
-
     })
 
   }
