@@ -1,8 +1,8 @@
-<div class="">
+<div class="w-full text-center">
     <section class="container-xxl mt-3 mb-3">
         <h2>Điện thoại nổi bật</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col" *ngFor="let product of pagedItemList; let i = index">
+            <div class="col" *ngFor="let product of products | slice:0:limit ; let i = index">
                 <div class="card" style="width: 18rem;">
                     <a (click)="gotoTop()" [routerLink]="['/product',product._id]"> <img [src]="product.image"
                             class="card-img-top" alt="image sản phẩm"></a>
@@ -26,9 +26,6 @@
             </div>
         </div>
     </section>
-</div>
-<div>
-    <button [disabled]="currentPage === 1" (click)="prevPage()">Prev</button>
+    <button class="my-2 bg-red-600 text-white p-2 rounded-md" (click)="increaseLimit()">Load more</button>
 
-    <button [disabled]="currentPage === totalPages" (click)="nextPage()">Next</button>
 </div>

@@ -13,37 +13,23 @@ import { FormBuilder } from '@angular/forms';
 })
 export class ProductComponent {
 
-  products: any = []
+  products: any[] = []
 
 
   categories: any = [];
-
-  currentPage = 1;
-  pageSize = 3;
-
-  get pagedItemList() {
-    const startIndex = (this.currentPage - 1) * this.pageSize;
-    const endIndex = startIndex + this.pageSize;
-    return this.products.slice(startIndex, endIndex);
+  limit: number = 4;
+  increaseLimit() {
+    this.limit += 4;
   }
 
-  get totalPages() {
-    return Math.ceil(this.products.length / this.pageSize);
-  }
 
-  prevPage() {
-    this.currentPage--;
-  }
 
-  nextPage() {
-    this.currentPage++;
-  }
 
 
   constructor(private productService: ProductService, private categoriesService: CategoriesService, private fb: FormBuilder) {
     this.productService.getProducts().subscribe(data => {
       this.products = data.products
-      console.log(this.products.length);
+      console.log(this.products);
 
 
 
