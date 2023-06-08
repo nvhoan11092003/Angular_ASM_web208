@@ -26,9 +26,9 @@
 
 								<div class="form-outline mb-4">
 									<label class="form-label " for="form3Example1cg">Your Number</label>
-									<input type="text" required id="form3Example1cg" formControlName="number"
+									<input type="text" required formControlName="number"
 										[ngClass]="{'is-invalid': submited && number  && number.invalid }" name="number"
-										placeholder="Username" class="form-control  form-control-lg" />
+										placeholder="Number" class="form-control  form-control-lg" />
 									<!-- show errer -->
 									<div class="text-danger">
 										<i *ngIf="submited && number && number.invalid "

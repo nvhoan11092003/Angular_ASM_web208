@@ -1,4 +1,3 @@
-import { ProductService } from 'src/app/services.service';
 import { SignupService } from './../../../signup.service';
 import { IUser } from './../../../common/user';
 
@@ -47,31 +46,25 @@ export class SignUpComponent {
         name: this.name?.value || "",
         number: this.number?.value || 0,
         email: this.email?.value || "",
-        Confirmpassword: this.Confirmpassword?.value || "",
+        confirmPassword: this.Confirmpassword?.value || "",
         password: this.password?.value || "",
      
       }
       console.log('signup submitted:', this.signupform.value);
       // Goi API
-
-      this.SignupService.addUsers(user).subscribe(data => {
+      this.SignupService.signup(user).subscribe(data => {
         console.log(data);
+        alert("Đăng Ký Thành Công Tài Khoản")
+            if (data.id) {
+              
+
+            }
       })
     }
     else {
-      const user: IUser = {
-        name: this.name?.value || "",
-        number: this.number?.value || 0,
-        email: this.email?.value || "",
-        Confirmpassword: this.Confirmpassword?.value || "",
-        password: this.password?.value || "",
-     
-      }
       this.submited = true
       console.log("invalid");
-      this.SignupService.addUsers(user).subscribe(data => {
-        console.log(data);
-      })
+      
 
     }
   }

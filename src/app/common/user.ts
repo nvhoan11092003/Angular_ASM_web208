@@ -4,7 +4,12 @@ export interface IUser {
     number : number
     email : string,
     password: string,
-    Confirmpassword : string
+    confirmPassword : string
     role? : string 
-      
+    
+}
+
+export interface IUsersignin {
+    email: string,
+    password : string,   
 }
