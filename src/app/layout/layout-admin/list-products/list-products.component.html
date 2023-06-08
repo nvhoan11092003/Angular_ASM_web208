@@ -1,6 +1,12 @@
 <div class="">
     <h2>Danh sách sản phẩm</h2>
     <a routerLink="/admin/add-product" class="btn btn-primary mb-4">Thêm sản phẩm</a>
+    <div class="space-x-1">
+        <button class="bg-cyan-400 w-8 text-white p-1 rounded-md" [disabled]="currentPage === 1" (click)="prevPage()"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button class="bg-cyan-400 w-8 text-white p-1 rounded-md" [disabled]="currentPage === totalPages"
+            (click)="nextPage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
     <table class=" table table-bordered table-responsive">
         <thead>
             <tr>
@@ -14,7 +20,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of products">
+            <tr *ngFor="let item of pagedItemList">
                 <td>{{item.name}}</td>
                 <td>{{item.price}}</td>
                 <td>{{item.original_price}}</td>
@@ -31,4 +37,10 @@
             </tr>
         </tbody>
     </table>
+    <div class="space-x-1">
+        <button class="bg-cyan-400 w-8 text-white p-1 rounded-md" [disabled]="currentPage === 1" (click)="prevPage()"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button class="bg-cyan-400 w-8 text-white p-1 rounded-md" [disabled]="currentPage === totalPages"
+            (click)="nextPage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
 </div>

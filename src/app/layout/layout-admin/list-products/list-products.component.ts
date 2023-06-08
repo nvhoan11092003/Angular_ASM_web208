@@ -15,6 +15,26 @@ export class ListProductsComponent {
       this.products = data?.products
     })
   }
+  currentPage = 1;
+  pageSize = 3;
+
+  get pagedItemList() {
+    const startIndex = (this.currentPage - 1) * this.pageSize;
+    const endIndex = startIndex + this.pageSize;
+    return this.products.slice(startIndex, endIndex);
+  }
+
+  get totalPages() {
+    return Math.ceil(this.products.length / this.pageSize);
+  }
+
+  prevPage() {
+    this.currentPage--;
+  }
+
+  nextPage() {
+    this.currentPage++;
+  }
   handleDelete(id: string | number | undefined) {
     const confilm = window.confirm("Bạn có muốn xóa không ?");
     if (confilm) {
