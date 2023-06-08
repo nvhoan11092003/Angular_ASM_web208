@@ -13,6 +13,7 @@ export class AppComponent {
         style: 'currency',
         currency: 'VND',
     });
+
 }
 
 

@@ -1,0 +1,19 @@
+input[type="checkbox"] {
+
+    /* ẩn checkbox được mặc định */
+    /* -webkit-appearance: none; */
+    /* ẩn checkbox trên trình duyệt Safari */
+    width: 20px;
+    /* chiều rộng checkbox */
+    height: 20px;
+    /* chiều cao checkbox */
+    border: 1px solid #ccc;
+    color: #fff;
+    /* viền checkbox */
+    background-color: #fff;
+    /* màu nền của checkbox */
+    outline: none;
+    /* loại bỏ đường viền khi được chọn */
+    margin-right: 5px;
+    /* khoảng cách giữa checkbox và label */
+}

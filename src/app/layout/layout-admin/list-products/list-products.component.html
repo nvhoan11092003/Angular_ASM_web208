@@ -1,0 +1,46 @@
+<div class="">
+    <h2>Danh sách sản phẩm</h2>
+    <a routerLink="/admin/add-product" class="btn btn-primary mb-4">Thêm sản phẩm</a>
+    <div class="space-x-1">
+        <button class="bg-cyan-400 w-8 text-white p-1 rounded-md" [disabled]="currentPage === 1" (click)="prevPage()"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button class="bg-cyan-400 w-8 text-white p-1 rounded-md" [disabled]="currentPage === totalPages"
+            (click)="nextPage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <table class=" table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Orinal_price</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>salient_features</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of pagedItemList">
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.original_price}}</td>
+                <td><img src={{item.image}} alt="">
+                </td>
+                <td>{{item.description}}</td>
+                <td>{{item.salient_features}}</td>
+                <td>
+                    <a [routerLink]="['/admin/update-product/',item._id]"><span
+                            class="material-symbols-outlined me-2">edit</span></a>
+                    <button (click)="handleDelete(item._id)"><span
+                            class="material-symbols-outlined">delete</span></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="space-x-1">
+        <button class="bg-cyan-400 w-8 text-white p-1 rounded-md" [disabled]="currentPage === 1" (click)="prevPage()"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <button class="bg-cyan-400 w-8 text-white p-1 rounded-md" [disabled]="currentPage === totalPages"
+            (click)="nextPage()"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</div>

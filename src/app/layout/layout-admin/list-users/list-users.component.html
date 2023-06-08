@@ -1,0 +1,43 @@
+<div class="container-xxl">
+
+    <app-header-admin></app-header-admin>
+    <div class="row row-cols-2 ">
+        <app-categorys class="col-2"></app-categorys>
+        <div class="col-10">
+            <h2>Danh sách tài khoản</h2>
+            <table class=" table table-bordered table-responsive">
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Image</th>
+                        <th>Address</th>
+                        <th>Vai trò</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of users;index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.password}}</td>
+                        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMx1itTXTXLB8p4ALTTL8mUPa9TFN_m9h5VQ&usqp=CAU"
+                                width="50px" alt="">
+                        </td>
+                        <td>Thái bình</td>
+                        <td>{{item.role}}</td>
+                        <td style="text-align: center">
+                            <button (click)="handleDelete(item._id)"><span
+                                    class="material-symbols-outlined">delete</span></button>
+
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
