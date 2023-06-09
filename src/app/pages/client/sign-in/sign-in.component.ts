@@ -33,14 +33,14 @@ export class SignInComponent {
     if (this.signinform.valid) {
       console.log('Login submitted:', this.signinform.value);
       this.submited = true
-      this.errer = true
       // Goi API
-      this.UserService.signin(this.email?.value || "" , this.password?.value  || "") 
+      this.UserService.signin(this.email?.value || "", this.password?.value || "")
+      
+        
     } else {
       this.submited = true
       this.errer = false
       console.log("invalid");
-
     }
   }
 
