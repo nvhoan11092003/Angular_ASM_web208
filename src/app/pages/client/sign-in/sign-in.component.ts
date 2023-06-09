@@ -38,6 +38,7 @@ export class SignInComponent {
       this.UserService.signin(this.email?.value || "" , this.password?.value  || "") 
     } else {
       this.submited = true
+      this.errer = false
       console.log("invalid");
 
     }
