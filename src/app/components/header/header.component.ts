@@ -21,6 +21,7 @@ export class HeaderComponent {
     if (localStorage.getItem("user")) {
       this.user = JSON.parse(localStorage.getItem("user") || "");
     }
+    this.checkUser();
   }
   check: number = 0;
   filteredItemList = this.itemList;

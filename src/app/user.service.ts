@@ -28,8 +28,12 @@ export class UserService {
         const user = data.user
         localStorage.setItem('user', JSON.stringify(user))
         console.log(localStorage.getItem('user'));
+        if (JSON.parse(localStorage.getItem('user') || '').role === "admin") {
+          this.router.navigate(['/', 'admin'],)
 
-        this.router.navigate(['/', 'home'],).then(() => location.reload());
+        }
+        else
+          this.router.navigate(['/', 'home'],).then(() => location.reload());
 
       })
   }

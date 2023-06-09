@@ -7,7 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HeaderAdminComponent {
 
-  
-
+  user: any;
+  constructor() {
+    this.user = JSON.parse(localStorage.getItem("user") || '')
+  }
+  dangxuat() {
+    localStorage.removeItem('user')
+    location.reload()
+  }
 
 }

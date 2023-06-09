@@ -38,7 +38,6 @@ const routes: Routes = [
       },
       { path: 'blog', component: BlogComponent },
       { path: 'cart', component: CartComponent },
-      { path: '**', component: NotFoundComponent }
     ],
   },
 
@@ -47,7 +46,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: LayoutAdminComponent,
-    canActivate : [MyGuardGuard],
+    canActivate: [MyGuardGuard],
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
@@ -62,7 +61,8 @@ const routes: Routes = [
       { path: 'update-brand/:id', component: UpdateBrandComponent },
     ],
   },
- 
+  { path: '**', component: NotFoundComponent }
+
   // ứng dụng phía khách:
 
 
