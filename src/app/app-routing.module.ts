@@ -1,3 +1,4 @@
+import { MyGuardGuard } from './my-guard.guard';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { LayoutAdminComponent } from './layout/layout-admin/layout-admin.component';
 import { SignUpComponent } from './pages/client/sign-up/sign-up.component';
@@ -44,6 +45,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: LayoutAdminComponent,
+    canActivate : [MyGuardGuard],
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
