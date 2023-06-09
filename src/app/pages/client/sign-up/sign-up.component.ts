@@ -22,8 +22,8 @@ private UserService : UserService,
     name: new FormControl("", [Validators.required]),
     number: new FormControl(null, [Validators.required]),
     email: new FormControl("", [Validators.required , Validators.email]),
-    password: new FormControl("", [Validators.required]),
-    Confirmpassword: new FormControl("", [Validators.required]),
+    password: new FormControl("", [Validators.required ,Validators.minLength(6)] ,),
+    Confirmpassword: new FormControl("", [Validators.required ,Validators.minLength(6)]),
   })
 
  
