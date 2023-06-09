@@ -50,7 +50,7 @@
 										<i *ngIf="submited && email && email.invalid "
 											class="fa fa-times text-danger"></i>
 										<span *ngIf="submited && email && email.invalid ">
-											email is required
+											{{getemailErrorMessage()}}
 										</span>
 
 									</div>
@@ -65,10 +65,10 @@
 										class="form-control form-control-lg" />
 									<!-- show errer -->
 									<div class="text-danger">
-										<i *ngIf="submited && password && password.invalid "
+										<i *ngIf="submited  && getpwErrorMessage()   "
 											class="fa fa-times text-danger"></i>
-										<span *ngIf="submited && password && password.invalid ">
-											password is required
+										<span *ngIf="submited  && getpwErrorMessage() ">
+											{{getpwErrorMessage()}}
 										</span>
 
 									</div>
@@ -83,7 +83,7 @@
 									<!-- show errer -->
 									<div class="text-danger">
 										<i *ngIf="submited && Confirmpassword && Confirmpassword.invalid "
-											class="fa fa-times text-danger"></i>
+											class="fa fa-times text-dang	er"></i>
 										<span *ngIf="submited && Confirmpassword && Confirmpassword.invalid ">
 											Confirmpassword is required
 										</span>

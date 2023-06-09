@@ -1,5 +1,6 @@
+import { FormBuilder } from '@angular/forms';
 import { UserService } from './../../../user.service';
-import { Router } from '@angular/router';
+
 import { IUsersignup } from './../../../common/user';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -13,18 +14,52 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class SignUpComponent {
   submited = false
   constructor(
-    private UserService: UserService,
-    private router: Router,
-   
+private UserService : UserService,
+    private fb: FormBuilder
   ) { }
  
-  signupform = new FormGroup({
+  signupform = this.fb.group({
     name: new FormControl("", [Validators.required]),
     number: new FormControl(null, [Validators.required]),
-    email: new FormControl("", [Validators.required]),
+    email: new FormControl("", [Validators.required , Validators.email]),
     password: new FormControl("", [Validators.required]),
     Confirmpassword: new FormControl("", [Validators.required]),
   })
+
+ 
+
+  getemailErrorMessage() {
+    if (this.email) {
+     if (this.email.hasError('required') || "") {
+       return 'Email is required';
+     }
+     if (this.email.hasError('email')) {
+       return 'Email is Invalid';
+      }
+      if (this.email.hasError('unique')) {
+       return 'Email is registered';
+     }
+     }    
+   throw new Error('Lỗi không rõ nguyên nhân');
+ 
+  }
+  
+  getpwErrorMessage() {
+    if (this.password) {
+      if (this.password.hasError('required') || "") {
+        return 'password is required';
+      }
+      if (this.password.value !== this.Confirmpassword?.value) {
+        return 'passwords do not match';
+      }
+      if (this.password?.value!.length < 6) {
+        console.log(this.password?.value!.length);
+        
+        return "password must not be less than 6"
+      }
+    }
+    return false
+  }
 
   get name() {
     return this.signupform.get("name")
@@ -43,7 +78,8 @@ export class SignUpComponent {
   }
   
   onSubmit() {
-    if (this.signupform.valid) {
+    if (this.signupform.valid) {  
+      this.submited = true
       const userformsignup: IUsersignup = {
         name: this.name?.value || "",
         number: this.number?.value || 0,
@@ -61,7 +97,10 @@ export class SignUpComponent {
           this.UserService.signin(this.email?.value || "" , this.password?.value  || "")
         }
       })
-  }
+    } else {
+
+      this.submited = true
+    }
      }
   gotoTop() {
     window.scroll({
