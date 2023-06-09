@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
-  constructor(private http: HttpClient ,private router: Router) {
+  constructor(private http: HttpClient, private router: Router) {
   }
 
   signup(User: IUsersignup): Observable<IUserdata> {
@@ -18,18 +18,20 @@ export class UserService {
   // login(User: IUsersignin): Observable<IUserdata> {
   //   return this.http.post<IUserdata>('http://localhost:8080/api/signin/', User);
   // }
-  signin(email : string | "", password : string) {
+  signin(email: string | "", password: string) {
     const userform = {
       email: email || "",
       password: password || "",
     }
     this.http.post<IUserdata>('http://localhost:8080/api/signin/', userform)
       .subscribe(data => {
-      const user = data.user 
-      localStorage.setItem('user', JSON.stringify(user)) 
-      console.log(localStorage.getItem('user')); 
-      this.router.navigate(['/', 'home']);
-    })
+        const user = data.user
+        localStorage.setItem('user', JSON.stringify(user))
+        console.log(localStorage.getItem('user'));
+
+        this.router.navigate(['/', 'home'],).then(() => location.reload());
+
+      })
   }
 
 }

@@ -14,14 +14,14 @@ export class AppComponent {
         currency: 'VND',
     });
     constructor(
-        private router : Router
-      ) { }
+        private router: Router
+    ) { }
     // check quyen
     checkquyen() {
         localStorage.getItem('user')
     }
 
-  
+
 
 
 }

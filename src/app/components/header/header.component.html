@@ -95,13 +95,31 @@
                 <div class="text-center relative show">
                     <div class="">
                         <i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i>
-                        <p class="text-[#ffffff]">
+                        <p *ngIf="!checkUser()" class="text-[#ffffff]">
                             Tài khoản của tôi
                         </p>
+                        <p *ngIf="checkUser()" class="text-[#ffffff] w-[7rem]">
+                            {{user.name}}
+                        </p>
                     </div>
-                    <ul class="auth bg-white absolute z-20 w-full text-left px-3 show hidden">
-                        <li class="py-2"><a routerLink="signup">Đăng ký</a></li>
-                        <li class="py-2"><a routerLink="signin">Đăng nhập</a></li>
+                    <ul *ngIf="!checkUser()" class="auth bg-white absolute z-20 w-full text-left  show hidden">
+                        <li routerLink="signin"
+                            class="w-full py-2 hover:bg-blue-600 active:bg-red-600 px-3 hover:text-white">
+                            <button>Đăng nhập</button>
+                        </li>
+                        <li routerLink="signup"
+                            class="w-full py-2 hover:bg-blue-600 active:bg-red-600 px-3 hover:text-white">
+                            <button>Đăng kí</button>
+                        </li>
+                    </ul>
+                    <ul *ngIf="checkUser()" class="auth bg-white absolute z-20 w-full text-left  show hidden">
+                        <li class="w-full py-2 hover:bg-blue-600 active:bg-red-600 px-3 hover:text-white">
+                            <button>Thông tin</button>
+                        </li>
+                        <li (click)="dangxuat()"
+                            class="w-full py-2 hover:bg-blue-600 active:bg-red-600 px-3 hover:text-white">
+                            <button>Đăng xuất</button>
+                        </li>
                     </ul>
                 </div>
 

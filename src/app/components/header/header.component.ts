@@ -10,14 +10,17 @@ export class HeaderComponent {
   itemList: any = []
   filterValue: string = '';
   display: boolean = false;
+  user: any;
+
   constructor(public data: ProductService) {
 
     this.data.getProducts().subscribe((item) => {
       this.itemList = item.products;
-      console.log(this.itemList);
 
     })
-
+    if (localStorage.getItem("user")) {
+      this.user = JSON.parse(localStorage.getItem("user") || "");
+    }
   }
   check: number = 0;
   filteredItemList = this.itemList;
@@ -44,6 +47,17 @@ export class HeaderComponent {
 
     }
   }
+  checkUser() {
+    if (this.user) {
 
+      return true;
+
+    }
+    else return false;
+  }
+  dangxuat() {
+    localStorage.removeItem('user')
+    location.reload()
+  }
 }
 
