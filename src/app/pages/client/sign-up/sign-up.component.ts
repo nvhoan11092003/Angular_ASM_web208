@@ -1,6 +1,6 @@
-import { SignupService } from './../../../signup.service';
-import { IUser } from './../../../common/user';
-
+import { UserService } from './../../../user.service';
+import { Router } from '@angular/router';
+import { IUsersignup } from './../../../common/user';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -13,15 +13,17 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class SignUpComponent {
   submited = false
   constructor(
-    private SignupService: SignupService
-  ){}
+    private UserService: UserService,
+    private router: Router,
+   
+  ) { }
  
   signupform = new FormGroup({
     name: new FormControl("", [Validators.required]),
-    number: new FormControl(null , [Validators.required ]),
-    email : new FormControl("",[Validators.required ]),
-    password : new FormControl("",[Validators.required ]),
-    Confirmpassword : new FormControl("",[Validators.required ]),
+    number: new FormControl(null, [Validators.required]),
+    email: new FormControl("", [Validators.required]),
+    password: new FormControl("", [Validators.required]),
+    Confirmpassword: new FormControl("", [Validators.required]),
   })
 
   get name() {
@@ -42,33 +44,25 @@ export class SignUpComponent {
   
   onSubmit() {
     if (this.signupform.valid) {
-      const user: IUser = {
+      const userformsignup: IUsersignup = {
         name: this.name?.value || "",
         number: this.number?.value || 0,
         email: this.email?.value || "",
         confirmPassword: this.Confirmpassword?.value || "",
-        password: this.password?.value || "",
-     
-      }
+        password: this.password?.value || "", }
       console.log('signup submitted:', this.signupform.value);
       // Goi API
-      this.SignupService.signup(user).subscribe(data => {
-        console.log(data);
-        alert("Đăng Ký Thành Công Tài Khoản")
-            if (data.id) {
-              
-
-            }
+      this.UserService.signup(userformsignup).subscribe(data  => {
+        alert("Đăng Ký Thành Công Tài Khoản")       
+       const { user } = data
+        console.log("data dang ky", user);
+        // Dang ky song thi dang nhap luon
+        if (user) {
+          this.UserService.signin(this.email?.value || "" , this.password?.value  || "")
+        }
       })
-    }
-    else {
-      this.submited = true
-      console.log("invalid");
-      
-
-    }
   }
-   
+     }
   gotoTop() {
     window.scroll({
       top: 0,
@@ -76,6 +70,5 @@ export class SignUpComponent {
       behavior: 'smooth'
     });
     // console.log(this.products);
-
   }
-}
+} 

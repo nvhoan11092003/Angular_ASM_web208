@@ -1,4 +1,4 @@
-import { SignupService } from './signup.service';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -70,7 +70,7 @@ import { CartComponent } from './pages/client/cart/cart.component';
     FormsModule, CommonModule
   ],
   providers: [
-    SignupService,
+  
   ],
   bootstrap: [AppComponent,
     FooterComponent
