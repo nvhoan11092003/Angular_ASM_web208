@@ -66,7 +66,7 @@
                 </button>
                 <ul class="absolute z-10 bg-white top-[40px] left-[0] w-[458px] " *ngIf="display">
                     <a *ngFor="let item of filteredItemList" [href]="['/product/'+item._id]">
-                        <li class="p-2 ">{{ item.name }}</li>
+                        <li class="p-2 truncate">{{ item.name }}</li>
                     </a>
                 </ul>
 
@@ -98,7 +98,7 @@
                         <p *ngIf="!checkUser()" class="text-[#ffffff]">
                             Tài khoản của tôi
                         </p>
-                        <p *ngIf="checkUser()" class="text-[#ffffff] w-[7rem]">
+                        <p *ngIf="checkUser()" class="text-[#ffffff] w-[7rem] truncate">
                             {{user.name}}
                         </p>
                     </div>
