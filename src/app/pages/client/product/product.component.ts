@@ -15,29 +15,45 @@ export class ProductComponent {
 
   products: any[] = []
 
+  list: any[] = [];
 
   categories: any = [];
   limit: number = 4;
   increaseLimit() {
     this.limit += 4;
   }
+  selectedValue: string = '';
 
+  onSelectChange() {
 
+    if (this.selectedValue == "tang") {
+
+      this.products = this.products.sort((a, b) => a.price - b.price)
+
+    }
+    else if (this.selectedValue == "giam") {
+      this.products = this.products.sort((a, b) => b.price - a.price)
+    }
+    else {
+      this.products = [...this.list]
+
+    }
+
+  }
 
 
 
   constructor(private productService: ProductService, private categoriesService: CategoriesService, private fb: FormBuilder) {
     this.productService.getProducts().subscribe(data => {
       this.products = data.products
-      console.log(this.products);
-
-
+      this.list = [...this.products]
 
     })
     this.categoriesService.getCategories().subscribe(data => {
       this.categories = data.categorys
     })
 
+    this.onSelectChange
   }
 
   isShow: boolean = false;

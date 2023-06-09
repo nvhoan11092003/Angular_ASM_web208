@@ -1,0 +1,4 @@
+.pagination button.active {
+    background-color: #00fff7;
+    color: #ffffff;
+}

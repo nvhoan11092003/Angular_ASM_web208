@@ -9,31 +9,66 @@ import { ProductService } from 'src/app/services.service';
 })
 export class ListProductsComponent {
   products: IProduct[] = [];
-
+  pageSize = 3;
+  currentPage = 1;
+  startIndex = 0;
+  endIndex = this.pageSize;
+  pages: number[] = [];
   constructor(private productService: ProductService) {
     this.productService.getProducts().subscribe(data => {
       this.products = data?.products
+      this.calculatePages();
+
     })
-  }
-  currentPage = 1;
-  pageSize = 3;
 
-  get pagedItemList() {
-    const startIndex = (this.currentPage - 1) * this.pageSize;
-    const endIndex = startIndex + this.pageSize;
-    return this.products.slice(startIndex, endIndex);
   }
+  // a: any
 
-  get totalPages() {
-    return Math.ceil(this.products.length / this.pageSize);
+
+
+  calculatePages() {
+    const pageCount = Math.ceil(this.products.length / this.pageSize);
+    this.pages = [];
+    for (let i = 1; i <= pageCount; i++) {
+      this.pages.push(i);
+      // console.log(this.pages);
+
+    }
   }
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+    // console.log(this.products);
 
-  prevPage() {
-    this.currentPage--;
+  }
+  goToPage(page: number) {
+    this.currentPage = page;
+    this.startIndex = (this.currentPage - 1) * this.pageSize;
+    this.endIndex = this.startIndex + this.pageSize;
+    if (this.currentPage == page) {
+      // console.log(this.a);
+
+    }
   }
 
   nextPage() {
-    this.currentPage++;
+    if (this.currentPage < this.pages.length) {
+      this.currentPage++;
+      this.startIndex = (this.currentPage - 1) * this.pageSize;
+      this.endIndex = this.startIndex + this.pageSize;
+    }
+
+  }
+
+  prevPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.startIndex = (this.currentPage - 1) * this.pageSize;
+      this.endIndex = this.startIndex + this.pageSize;
+    }
   }
   handleDelete(id: string | number | undefined) {
     const confilm = window.confirm("Bạn có muốn xóa không ?");

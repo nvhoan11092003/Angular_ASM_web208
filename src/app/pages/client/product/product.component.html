@@ -1,13 +1,21 @@
 <div class="w-full">
     <section class="container-xxl mt-3 mb-3">
-        <h2>Điện thoại nổi bật</h2>
+        <div class="w-full  flex justify-between items-center ">
+            <h2>Điện thoại nổi bật</h2>
+
+            <select class="border" name="" id="" [(ngModel)]="selectedValue" (ngModelChange)="onSelectChange()">
+                <option value="">Sắp xếp</option>
+                <option value="tang">Tăng dần</option>
+                <option value="giam">Giảm dần</option>
+            </select>
+        </div>
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col" *ngFor="let product of products | slice:0:limit ; let i = index">
                 <div class="card" style="width: 18rem;">
                     <a (click)="gotoTop()" [routerLink]="['/product',product._id]"> <img [src]="product.image"
                             class="card-img-top" alt="image sản phẩm"></a>
                     <p class="cart-item">Trả góp 0%</p>
-                    <p class="cart-item1">Giảm 7.000.000đ</p>
+                    <p class="cart-item1">Giảm {{VND.format(product.original_price-product.price)}}</p>
                     <div class="card-body">
                         <h5 class="card-title truncate">{{product.name}}</h5>
                         <div class="d-flex">
