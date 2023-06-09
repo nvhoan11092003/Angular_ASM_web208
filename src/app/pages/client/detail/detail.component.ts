@@ -25,6 +25,7 @@ export class DetailComponent implements OnInit {
     private formBuilder: FormBuilder
   ) { }
 
+
   // product: any;
 
   // data = axios.get("http://localhost:8000/api/products/")
