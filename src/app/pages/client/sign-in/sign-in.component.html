@@ -2,6 +2,13 @@
   <div class="form">
     <h1>Sign-in</h1>
     <br>
+    <div class="text-danger">
+      <i *ngIf="submited &&  errer  " class="fa fa-times text-danger"></i>
+      <span *ngIf="submited && errer ">
+        Tài Khoản hoặc Mật Khẩu không đúng
+      </span>
+
+    </div>
     <form [formGroup]="signinform" class="login-form" (ngSubmit)="onSubmit()">
       <input type="text" [ngClass]="{'is-invalid': submited && email  && email.invalid }" placeholder="Email"
         formControlName="email" name="email" />

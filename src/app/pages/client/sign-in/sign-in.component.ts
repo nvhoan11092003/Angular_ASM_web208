@@ -17,6 +17,7 @@ export class SignInComponent {
     private UserService: UserService,
   ){}
   submited = false
+  errer = false
   signinform = new FormGroup({
     email : new FormControl("",[Validators.required ]),
     password : new FormControl("",[Validators.required ]),
@@ -31,10 +32,10 @@ export class SignInComponent {
   onSubmit() { 
     if (this.signinform.valid) {
       console.log('Login submitted:', this.signinform.value);
+      this.submited = true
+      this.errer = true
       // Goi API
-      this.UserService.signin(this.email?.value || "" , this.password?.value  || "")
-    
-      
+      this.UserService.signin(this.email?.value || "" , this.password?.value  || "") 
     } else {
       this.submited = true
       console.log("invalid");

@@ -7,9 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderAdminComponent {
 
-  dangxuat() {
-    localStorage.removeItem('user')
-  }
+  
 
 
 }
