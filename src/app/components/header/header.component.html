@@ -92,18 +92,25 @@
                         Thanh toán & tiện ích
                     </p>
                 </div>
-                <a routerLink="signin" class="text-center">
-                    <i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i>
-                    <p class="text-[#ffffff]">
-                        Tài khoản của tôi
-                    </p>
-                </a>
-                <div class="text-center">
+                <div class="text-center relative show">
+                    <div class="">
+                        <i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i>
+                        <p class="text-[#ffffff]">
+                            Tài khoản của tôi
+                        </p>
+                    </div>
+                    <ul class="auth bg-white absolute z-20 w-full text-left px-3 show hidden">
+                        <li class="py-2"><a routerLink="signup">Đăng ký</a></li>
+                        <li class="py-2"><a routerLink="signin">Đăng nhập</a></li>
+                    </ul>
+                </div>
+
+                <a routerLink="cart" class="text-center">
                     <i class="fa-sharp fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i>
                     <p class="text-[#ffffff]">
                         Giỏ hàng
                     </p>
-                </div>
+                </a>
             </div>
         </div>
     </header>

@@ -26,3 +26,15 @@ a {
         display: block;
     }
 }
+
+/* .show {
+    pointer-events: none;
+} */
+
+/* .show:hover {
+    pointer-events: auto;
+} */
+
+.show:hover .auth {
+    display: block;
+}

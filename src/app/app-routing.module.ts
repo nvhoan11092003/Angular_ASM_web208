@@ -16,6 +16,7 @@ import { ListUsersComponent } from './layout/layout-admin/list-users/list-users.
 import { ListBrandsComponent } from './layout/layout-admin/list-brands/list-brands.component';
 import { AddBrandComponent } from './layout/layout-admin/add-brand/add-brand.component';
 import { UpdateBrandComponent } from './layout/layout-admin/update-brand/update-brand.component';
+import { CartComponent } from './pages/client/cart/cart.component';
 
 const routes: Routes = [
 
@@ -35,6 +36,7 @@ const routes: Routes = [
         component: SignUpComponent,
       },
       { path: 'blog', component: BlogComponent },
+      { path: 'cart', component: CartComponent },
 
     ],
   },
