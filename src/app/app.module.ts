@@ -1,3 +1,4 @@
+import { SignupService } from './signup.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -66,7 +67,9 @@ import { UpdateBrandComponent } from './layout/layout-admin/update-brand/update-
     ReactiveFormsModule,
     FormsModule, CommonModule
   ],
-  providers: [],
+  providers: [
+    SignupService,
+  ],
   bootstrap: [AppComponent,
     FooterComponent
   ]

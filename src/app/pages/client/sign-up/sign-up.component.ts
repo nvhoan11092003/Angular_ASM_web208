@@ -1,4 +1,6 @@
-import { iuser } from '../../../models/user';
+import { SignupService } from './../../../signup.service';
+import { IUser } from './../../../common/user';
+
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -10,9 +12,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   
 export class SignUpComponent {
   submited = false
-
+  constructor(
+    private SignupService: SignupService
+  ){}
+ 
   signupform = new FormGroup({
-    name: new FormControl("", [Validators.required ]),
+    name: new FormControl("", [Validators.required]),
+    number: new FormControl(null , [Validators.required ]),
     email : new FormControl("",[Validators.required ]),
     password : new FormControl("",[Validators.required ]),
     Confirmpassword : new FormControl("",[Validators.required ]),
@@ -20,6 +26,9 @@ export class SignUpComponent {
 
   get name() {
     return this.signupform.get("name")
+  }
+  get number() {
+    return this.signupform.get("number")
   }
   get email() {
     return this.signupform.get("email")
@@ -31,20 +40,42 @@ export class SignUpComponent {
     return this.signupform.get("Confirmpassword")
   }
   
-  onSubmit() { 
-
+  onSubmit() {
     if (this.signupform.valid) {
-    
+      const user: IUser = {
+        name: this.name?.value || "",
+        number: this.number?.value || 0,
+        email: this.email?.value || "",
+        confirmPassword: this.Confirmpassword?.value || "",
+        password: this.password?.value || "",
+     
+      }
       console.log('signup submitted:', this.signupform.value);
-        // Goi API
-    } else {
+      // Goi API
+      this.SignupService.signup(user).subscribe(data => {
+        console.log(data);
+        alert("Đăng Ký Thành Công Tài Khoản")
+            if (data.id) {
+              
+
+            }
+      })
+    }
+    else {
       this.submited = true
       console.log("invalid");
       
-   
 
     }
+  }
+   
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+    // console.log(this.products);
 
-  
   }
 }
