@@ -28,11 +28,11 @@ export class UserService {
       const user = data.user 
       localStorage.setItem('user', JSON.stringify(user)) 
         console.log(localStorage.getItem('user')); 
-        if (user.role = "admin") {
+        if (user.role === "admin") {
           this.router.navigate(['/', 'admin']);
         }
-          else
-        this.router.navigate(['/', 'home']);
+          else{  this.router.navigate(['/', 'home']);}
+      
        
     })
   }

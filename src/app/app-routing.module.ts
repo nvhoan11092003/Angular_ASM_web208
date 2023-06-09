@@ -36,7 +36,7 @@ const routes: Routes = [
         component: SignUpComponent,
       },
       { path: 'blog', component: BlogComponent },
-
+      { path: '**', component: NotFoundComponent }
     ],
   },
 
@@ -60,7 +60,7 @@ const routes: Routes = [
       { path: 'update-brand/:id', component: UpdateBrandComponent },
     ],
   },
-  { path: '**', component: NotFoundComponent }
+ 
   // ứng dụng phía khách:
 
 
