@@ -1,4 +1,7 @@
-import { SignupService } from './../../../signup.service';
+import { UserService } from './../../../user.service';
+
+import { Router } from '@angular/router';
+
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 
 import { Component } from '@angular/core';
@@ -9,11 +12,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent {
-  submited = false
+ 
   constructor(
-    private SignupService: SignupService
+    private UserService: UserService,
   ){}
-
+  submited = false
   signinform = new FormGroup({
     email : new FormControl("",[Validators.required ]),
     password : new FormControl("",[Validators.required ]),
@@ -25,27 +28,18 @@ export class SignInComponent {
     return this.signinform.get("password")
   }
 
-  
   onSubmit() { 
     if (this.signinform.valid) {
-      const user = {
-        email: this.email?.value || "",
-        password: this.password?.value || "",
-      }
       console.log('Login submitted:', this.signinform.value);
-        // Goi API
-      this.SignupService.signin(user).subscribe(data => {
-          console.log(data);
-          
-      })
-
+      // Goi API
+      this.UserService.signin(this.email?.value || "" , this.password?.value  || "")
+    
+      
     } else {
       this.submited = true
       console.log("invalid");
 
     }
-
-  
   }
 
    gotoTop() {
