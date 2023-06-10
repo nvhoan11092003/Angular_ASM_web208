@@ -14,9 +14,9 @@
         formControlName="email" name="email" />
       <!-- show errer -->
       <div class="text-danger">
-        <i *ngIf="submited && email && email.invalid " class="fa fa-times text-danger"></i>
-        <span *ngIf="submited && email && email.invalid ">
-          email is required
+        <i *ngIf="submited && email && email.invalid &&  getemailErrorMessage()" class="fa fa-times text-danger"></i>
+        <span *ngIf="submited && email && email.invalid &&  getemailErrorMessage()">
+          {{ getemailErrorMessage()}}
         </span>
 
       </div>
@@ -24,9 +24,9 @@
         [ngClass]="{'is-invalid': submited && password  && password.invalid }" placeholder="password" name="password" />
       <!-- show errer -->
       <div class="text-danger">
-        <i *ngIf="submited && password && password.invalid " class="fa fa-times text-danger"></i>
-        <span *ngIf="submited && password && password.invalid ">
-          password is required
+        <i *ngIf="submited && password && password.invalid && getpwErrorMessage()" class="fa fa-times text-danger"></i>
+        <span *ngIf="submited && password && password.invalid && getpwErrorMessage()">
+          {{getpwErrorMessage()}}
         </span>
 
       </div>
