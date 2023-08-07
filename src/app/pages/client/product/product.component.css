@@ -73,3 +73,8 @@
         /* Khoảng cách giữa các sản phẩm */
     }
 }
+
+.border {
+    width: 200px;
+    border-radius: 5px;
+}

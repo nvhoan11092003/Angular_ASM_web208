@@ -36,7 +36,6 @@ export class UpdateProductsComponent {
       this.productService.getProduct(id).subscribe(product => {
         this.product = product.products;
         // console.log(product);
-
         this.productForm.patchValue({
           name: this.product.name,
           price: this.product.price,
@@ -52,11 +51,12 @@ export class UpdateProductsComponent {
         this.categorys = data?.categorys
       })
   }
+
+
   HandleGetfile(file: any) {
     console.log(file.target.files[0]);
     const fileArr = file.target.files[0];
     this.uploadService.uploadFile(fileArr).subscribe(data => {
-      console.log(data.url);
       this.productForm.patchValue({
         image: data.url
       })
@@ -75,6 +75,8 @@ export class UpdateProductsComponent {
         image: this.productForm.value.image || '',
       }
       this.productService.updateProduct(product).subscribe(data => {
+        console.log({ data });
+
         alert("Cập nhật thành công");
         this.router.navigate(['/admin'])
       })

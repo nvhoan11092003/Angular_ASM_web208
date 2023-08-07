@@ -21,10 +21,9 @@ export class ListProductsComponent {
 
     })
 
+
   }
   // a: any
-
-
 
   calculatePages() {
     const pageCount = Math.ceil(this.products.length / this.pageSize);

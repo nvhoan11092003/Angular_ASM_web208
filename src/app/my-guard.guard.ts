@@ -8,13 +8,9 @@ import { Injectable } from '@angular/core';
 export class MyGuardGuard {
 
   constructor(private router: Router) {
-
-
   }
 
   // kiểm tra xem người dùng đã đăng nhập voi quyen aidmin hay chua hay chưa
-
-
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -26,10 +22,7 @@ export class MyGuardGuard {
     if (localStorage.getItem('user')) {
       const user = JSON.parse(localStorage.getItem('user') || "")
       const role = user.role
-
-
       if (role === 'admin') {
-
         return true; // cho phép truy cập
       } else {
         this.router.navigate(['/home']); // chuyển hướng đến trang đăng nhập
@@ -37,11 +30,8 @@ export class MyGuardGuard {
       }
     }
     else {
-
       this.router.navigate(['/home']); // chuyển hướng đến trang đăng nhập
-
       return true;
-
     }
   }
 

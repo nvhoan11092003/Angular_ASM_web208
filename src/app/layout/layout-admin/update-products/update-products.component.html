@@ -41,7 +41,8 @@
                     <div>
                         <select class="form-select mt-4" formControlName="categoryId">
                             <option value="">Lựa chọn</option>
-                            <option *ngFor="let item of categorys" [value]="item._id">{{item.name}}</option>
+                            <option *ngFor="let item of categorys ; index as i" [value]="item._id">{{item.name}}
+                            </option>
                         </select>
                     </div>
                 </div>

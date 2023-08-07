@@ -25,17 +25,6 @@ export class DetailComponent implements OnInit {
     private formBuilder: FormBuilder
   ) { }
 
-
-  // product: any;
-
-  // data = axios.get("http://localhost:8000/api/products/")
-  //   .then((res) => {
-  //     this.product = res.data
-
-  //   })
-  //   .catch((error) => console.log(error));
-  // constructor(private route: ActivatedRoute) { }
-
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
       const id = params.get('id');
