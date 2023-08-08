@@ -9,35 +9,44 @@
                     <div>
                         <label for="" class="form-lable mb-2">Name</label>
                         <input type="text" class="form-control" formControlName="name">
-
+                        <div class="text-danger" *ngIf="productForm.get('name')?.hasError('required')">Trường dữ liệu
+                            bắt buộc</div>
                     </div>
                     <div>
                         <label for="" class="form-lable mb-2">Price</label>
                         <input type="number" class="form-control" formControlName="price">
-
+                        <div class="text-danger" *ngIf="productForm.get('price')?.hasError('min')">Tiền phải là số</div>
                     </div>
                     <div>
                         <label for="" class="form-lable mb-2">Orinal_price</label>
                         <input type="number" class="form-control" formControlName="original_price">
-
+                        <div class="text-danger" *ngIf="productForm.get('original_price')?.hasError('min')">Tiền phải là
+                            số</div>
                     </div>
                     <div>
                         <label for="" class="form-lable mb-2">Image</label>
                         <input type="file" class="form-control file-upload" (change)="HandleGetfile($event)" #fileUpload
                             onchange="console.log(event.target.files)" formControlName="image">
-
+                        <div class="text-danger" *ngIf="productForm.get('image')?.hasError('required')">Trường dữ liệu
+                            bắt buộc
+                        </div>
                     </div>
                     <div>
                         <label for="" class="form-lable mb-2">description</label>
                         <textarea class="form-control" cols="10" rows="5" placeholder="Nhập mô tả"
                             formControlName="description">
                        </textarea>
+                        <div class="text-danger" *ngIf="productForm.get('description')?.hasError('minlength')">Tối thiểu
+                            10 kí tự</div>
+
                     </div>
                     <div>
                         <label for="" class="form-lable mb-2"> salient_features</label>
                         <textarea class="form-control" cols="10" rows="5" placeholder="Nhập mô tả dài"
                             formControlName="salient_features">
                        </textarea>
+                        <div class="text-danger" *ngIf="productForm.get('salient_features')?.hasError('minlength')">Tối
+                            thiểu 10 kí tự</div>
                     </div>
                     <div>
                         <div>
@@ -46,6 +55,8 @@
                                 <option *ngFor="let item of category" [value]='item._id'>
                                     {{item.name}}</option>
                             </select>
+                            <div class="text-danger" *ngIf="productForm.get('categoryId')?.hasError('required')">Trường
+                                dữ liệu bắt buộc</div>
                         </div>
                     </div>
                 </div>

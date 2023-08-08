@@ -1,6 +1,5 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ICategories } from 'src/app/common/categories';
 import { IProduct } from 'src/app/common/product';
@@ -14,15 +13,18 @@ import { UploadServiceService } from 'src/app/upload-service.service';
   templateUrl: './add-products.component.html',
   styleUrls: ['./add-products.component.css']
 })
-export class AddProductsComponent {
+export class AddProductsComponent implements OnInit {
   category: ICategories[] = [];
+
+  validate: boolean = false;
+
   constructor(
     private productService: ProductService,
     private formBuilder: FormBuilder,
     private router: Router,
-    private http: HttpClient,
     private uploadService: UploadServiceService
-  ) {
+  ) { }
+  ngOnInit(): void {
     this.productService.getCates().subscribe(data => {
       this.category = data?.categorys
     })
@@ -39,15 +41,16 @@ export class AddProductsComponent {
     })
   }
   productForm = this.formBuilder.group({
-    name: [''],
-    price: [0],
-    original_price: [0],
-    description: [''],
-    categoryId: [''],
-    salient_features: [''],
-    image: [''],
+    name: ['', [Validators.required]],
+    price: [0, [Validators.min(1)]],
+    original_price: [0, [Validators.min(1)]],
+    description: ['', [Validators.minLength(10)]],
+    categoryId: ['', [Validators.required]],
+    salient_features: ['', [Validators.minLength(10)]],
+    image: ['', [Validators.required]],
   })
   onHandleSubmit() {
+    this.validate = true;
     if (this.productForm.valid) {
       const product: IProduct = {
         name: this.productForm.value.name || "",
