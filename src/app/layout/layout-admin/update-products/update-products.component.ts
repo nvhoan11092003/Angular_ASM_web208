@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ICategories } from 'src/app/common/categories';
 import { IProduct } from 'src/app/common/product';
@@ -11,17 +11,18 @@ import { UploadServiceService } from 'src/app/upload-service.service';
   templateUrl: './update-products.component.html',
   styleUrls: ['./update-products.component.css']
 })
-export class UpdateProductsComponent {
+export class UpdateProductsComponent implements OnInit {
+  validate: boolean = false
   product!: IProduct;
   categorys: ICategories[] = [];
   productForm = this.formBuilder.group({
-    name: [''],
-    price: [0],
-    original_price: [0],
-    description: [''],
-    categoryId: [''],
-    salient_features: [''],
-    image: [''],
+    name: ['', [Validators.required]],
+    price: [0, [Validators.required]],
+    original_price: [0, Validators.required],
+    description: ['', [Validators.minLength(10)]],
+    categoryId: ['', [Validators.required]],
+    salient_features: ['', [Validators.minLength(10)]],
+    image: ['', [Validators.required]],
   }
   )
   constructor(
@@ -30,12 +31,12 @@ export class UpdateProductsComponent {
     private formBuilder: FormBuilder,
     private router: Router,
     private uploadService: UploadServiceService,
-  ) {
+  ) { }
+  ngOnInit(): void {
     this.route.paramMap.subscribe(param => {
       const id = param.get('id');
       this.productService.getProduct(id).subscribe(product => {
         this.product = product.products;
-        // console.log(product);
         this.productForm.patchValue({
           name: this.product.name,
           price: this.product.price,
@@ -52,7 +53,6 @@ export class UpdateProductsComponent {
       })
   }
 
-
   HandleGetfile(file: any) {
     console.log(file.target.files[0]);
     const fileArr = file.target.files[0];
@@ -63,6 +63,7 @@ export class UpdateProductsComponent {
     })
   }
   onHandleEdit() {
+    this.validate = true;
     if (this.productForm.valid && this.product) {
       const product: IProduct = {
         _id: this.product._id,
