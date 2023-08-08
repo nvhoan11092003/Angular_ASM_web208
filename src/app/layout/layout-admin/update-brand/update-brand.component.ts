@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ICategories } from 'src/app/common/categories';
@@ -9,17 +9,19 @@ import { ProductService } from 'src/app/services.service';
   templateUrl: './update-brand.component.html',
   styleUrls: ['./update-brand.component.css']
 })
-export class UpdateBrandComponent {
+export class UpdateBrandComponent implements OnInit {
+  validate: boolean = false;
   categorys!: ICategories;
   cateForm = this.formBuilder.group({
-    name: ['', Validators.required],
+    name: ['', [Validators.required]],
   })
   constructor(
     private productService: ProductService,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder,
     private router: Router,
-  ) {
+  ) { }
+  ngOnInit(): void {
     this.route.paramMap.subscribe(param => {
       const id = param.get('id');
       this.productService.getCate(id).subscribe(categorys => {
@@ -29,9 +31,9 @@ export class UpdateBrandComponent {
         })
       })
     })
-
   }
   onHandleEdit() {
+    this.validate = true;
     if (this.cateForm.valid && this.categorys) {
       const category: ICategories = {
         _id: this.categorys._id,

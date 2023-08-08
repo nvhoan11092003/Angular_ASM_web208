@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from "@angular/forms"
+import { FormBuilder, Validators } from "@angular/forms"
 import { ICategories } from 'src/app/common/categories';
 import { ProductService } from 'src/app/services.service';
 import { Router } from "@angular/router";
@@ -9,6 +9,8 @@ import { Router } from "@angular/router";
   styleUrls: ['./add-brand.component.css']
 })
 export class AddBrandComponent {
+  validate: boolean = false;
+
   constructor(
     private productService: ProductService,
     private formBuilder: FormBuilder,
@@ -16,9 +18,10 @@ export class AddBrandComponent {
   ) { }
 
   cateForm = this.formBuilder.group({
-    name: ['']
+    name: ['', [Validators.required]]
   })
   onHandleSubmit() {
+    this.validate = true;
     if (this.cateForm.valid) {
       const categorys: ICategories = {
         name: this.cateForm.value.name || "",
