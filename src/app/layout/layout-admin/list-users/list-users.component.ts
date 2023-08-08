@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IUser } from 'src/app/common/users';
 import { ProductService } from 'src/app/services.service';
 
@@ -7,11 +7,12 @@ import { ProductService } from 'src/app/services.service';
   templateUrl: './list-users.component.html',
   styleUrls: ['./list-users.component.css']
 })
-export class ListUsersComponent {
+export class ListUsersComponent implements OnInit {
   users: IUser[] = [];
   constructor(
     private productService: ProductService
-  ) {
+  ) { }
+  ngOnInit(): void {
     this.productService.getUsers().subscribe(data => {
       this.users = data.users
     })

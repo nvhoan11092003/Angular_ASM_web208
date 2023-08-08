@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ICategories } from 'src/app/common/categories';
 import { ProductService } from 'src/app/services.service';
 
@@ -7,15 +7,16 @@ import { ProductService } from 'src/app/services.service';
   templateUrl: './list-brands.component.html',
   styleUrls: ['./list-brands.component.css']
 })
-export class ListBrandsComponent {
+export class ListBrandsComponent implements OnInit {
   categories: ICategories[] = [];
   constructor(private productService: ProductService) {
+  }
+  ngOnInit(): void {
     this.productService.getCates().subscribe(data => {
       this.categories = data?.categorys;
       console.log({ data });
     })
   }
-
   OnhandleDelete(id: string | number | undefined) {
     const confilm = window.confirm("Bạn có muốn xóa không ?");
     if (confilm) {

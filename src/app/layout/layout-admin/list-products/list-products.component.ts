@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IProduct } from 'src/app/common/product';
 import { ProductService } from 'src/app/services.service';
 
@@ -7,23 +7,20 @@ import { ProductService } from 'src/app/services.service';
   templateUrl: './list-products.component.html',
   styleUrls: ['./list-products.component.css']
 })
-export class ListProductsComponent {
+export class ListProductsComponent implements OnInit {
   products: IProduct[] = [];
   pageSize = 3;
   currentPage = 1;
   startIndex = 0;
   endIndex = this.pageSize;
   pages: number[] = [];
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService) { }
+  ngOnInit(): void {
     this.productService.getProducts().subscribe(data => {
       this.products = data?.products
       this.calculatePages();
-
     })
-
-
   }
-  // a: any
 
   calculatePages() {
     const pageCount = Math.ceil(this.products.length / this.pageSize);
